@@ -1,0 +1,1501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>KRUPA IELTS PREP</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<style>
+:root{--bg:#0d1117;--surface:#161b22;--surface2:#1c2230;--border:#30363d;--teal:#00d4aa;--teal-dim:#00b891;--amber:#f0a500;--red:#f85149;--green:#3fb950;--text:#e6edf3;--muted:#7d8590;--reading:#58a6ff;--writing:#f0a500;--listening:#bc8cff;}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text);min-height:100vh;overflow-x:hidden;}
+/* ── AUTH ── */
+#authWrap{
+  min-height:100vh;display:flex;align-items:center;justify-content:center;
+  background:var(--bg);
+  background-image:radial-gradient(ellipse at 20% 50%,rgba(0,212,170,0.07) 0%,transparent 60%),radial-gradient(ellipse at 80% 20%,rgba(88,166,255,0.06) 0%,transparent 60%);
+  padding:24px;
+}
+.auth-box{background:var(--surface);border:1px solid var(--border);border-radius:18px;padding:36px 32px;width:100%;max-width:420px;box-shadow:0 24px 64px rgba(0,0,0,0.5);animation:fu .4s ease both;}
+.auth-logo{font-family:'Cormorant Garamond',serif;font-size:1.7rem;font-weight:700;color:var(--teal);text-align:center;margin-bottom:6px;}
+.auth-logo em{color:var(--text);font-style:normal;}
+.auth-sub{text-align:center;color:var(--muted);font-size:0.85rem;margin-bottom:24px;}
+.auth-field{margin-bottom:16px;}
+.auth-field label{display:block;font-size:0.78rem;font-weight:600;color:var(--muted);letter-spacing:0.8px;text-transform:uppercase;margin-bottom:6px;}
+.auth-field input{width:100%;padding:11px 14px;background:var(--bg);border:1px solid var(--border);border-radius:9px;color:var(--text);font-family:'DM Sans',sans-serif;font-size:0.9rem;transition:border .13s;}
+.auth-field input:focus{outline:none;border-color:var(--teal);}
+.eye-btn{position:absolute;right:12px;top:50%;transform:translateY(-50%);cursor:pointer;font-size:0.9rem;user-select:none;opacity:0.6;}
+.eye-btn:hover{opacity:1;}
+.auth-btn{width:100%;padding:12px;background:var(--teal);color:#000;border:none;border-radius:9px;font-family:'DM Sans',sans-serif;font-size:0.9rem;font-weight:700;cursor:pointer;margin-top:8px;transition:all .17s;}
+.auth-btn:hover{background:var(--teal-dim);transform:translateY(-1px);}
+.auth-btn-ghost{width:100%;padding:11px;background:transparent;color:var(--muted);border:1px solid var(--border);border-radius:9px;font-family:'DM Sans',sans-serif;font-size:0.85rem;font-weight:600;cursor:pointer;transition:all .17s;}
+.auth-btn-ghost:hover{border-color:var(--teal);color:var(--teal);}
+.auth-divider{text-align:center;color:var(--muted);font-size:0.78rem;margin:16px 0 10px;}
+.auth-msg{padding:10px 14px;border-radius:8px;font-size:0.83rem;margin-bottom:16px;text-align:center;line-height:1.5;}
+.auth-msg.err{background:rgba(248,81,73,.1);border:1px solid rgba(248,81,73,.3);color:#f85149;}
+.auth-msg.ok{background:rgba(63,185,80,.1);border:1px solid rgba(63,185,80,.3);color:var(--green);}
+#userChip{display:flex;align-items:center;gap:6px;}
+header{background:var(--surface);border-bottom:1px solid var(--border);padding:0 28px;display:flex;align-items:center;justify-content:space-between;height:60px;position:sticky;top:0;z-index:200;}
+.logo{font-family:'Cormorant Garamond',serif;font-size:1.45rem;font-weight:700;color:var(--teal);cursor:pointer;}
+.logo em{color:var(--text);font-style:normal;}
+.date-pill{font-size:0.72rem;color:var(--muted);letter-spacing:1px;text-transform:uppercase;}
+nav{background:var(--surface);border-bottom:1px solid var(--border);display:flex;padding:0 20px;overflow-x:auto;}
+.ntab{padding:13px 18px;color:var(--muted);font-size:0.78rem;font-weight:600;letter-spacing:1px;text-transform:uppercase;cursor:pointer;border:none;background:none;border-bottom:2px solid transparent;transition:all .18s;white-space:nowrap;font-family:'DM Sans',sans-serif;}
+.ntab:hover{color:var(--text);}
+.ntab.active{color:var(--teal);border-bottom-color:var(--teal);}
+.nbadge{background:var(--teal);color:#000;font-size:0.62rem;font-weight:700;padding:2px 6px;border-radius:10px;margin-left:4px;}
+main{max-width:1000px;margin:0 auto;padding:28px 18px;}
+/* HOME */
+.hero{text-align:center;padding:36px 0 24px;animation:fu .5s ease both;}
+@keyframes fu{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
+.hero h1{font-family:'Cormorant Garamond',serif;font-size:3rem;font-weight:700;line-height:1.1;}
+.hero h1 span{color:var(--teal);}
+.hero p{color:var(--muted);margin-top:10px;font-size:0.95rem;max-width:460px;margin-inline:auto;line-height:1.7;}
+.sgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin:28px 0;}
+.scard{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:24px 20px;cursor:pointer;transition:all .2s;position:relative;overflow:hidden;animation:fu .5s ease both;}
+.scard::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--ac);border-radius:14px 14px 0 0;}
+.scard:hover{transform:translateY(-4px);border-color:var(--ac);box-shadow:0 10px 36px rgba(0,0,0,.4);}
+.scard .si{font-size:1.8rem;margin-bottom:12px;}
+.scard h3{font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:700;margin-bottom:6px;}
+.scard p{font-size:0.8rem;color:var(--muted);line-height:1.55;}
+.pbar-wrap{margin-top:16px;}
+.pbar-num{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:700;}
+.pbar-lbl{font-size:0.68rem;color:var(--muted);letter-spacing:1px;text-transform:uppercase;margin-top:2px;}
+.pbar-thin{height:4px;background:var(--border);border-radius:2px;margin-top:10px;overflow:hidden;}
+.pbar-fill{height:100%;border-radius:2px;background:var(--ac);transition:width .6s ease;}
+/* SECTION */
+.sec-hdr{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:22px;flex-wrap:wrap;gap:10px;}
+.sec-hdr h2{font-family:'Cormorant Garamond',serif;font-size:1.8rem;font-weight:700;}
+.sec-hdr p{color:var(--muted);font-size:0.82rem;margin-top:4px;}
+.tp-box{background:var(--surface2);border:1px solid var(--border);border-radius:10px;padding:10px 16px;text-align:right;min-width:120px;}
+.tp-big{font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:700;color:var(--teal);}
+.tp-lbl{font-size:0.67rem;color:var(--muted);letter-spacing:1px;text-transform:uppercase;}
+/* EXERCISE GRID */
+.egrid{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-bottom:24px;}
+.ecard{background:var(--surface);border:1px solid var(--border);border-radius:9px;padding:12px 8px;text-align:center;cursor:pointer;transition:all .15s;}
+.ecard:hover{transform:translateY(-2px);border-color:var(--ac);}
+.ecard.done{border-color:var(--green);background:rgba(63,185,80,.07);}
+.ecard.acard{border-color:var(--teal);background:rgba(0,212,170,.07);}
+.ecard .en{font-size:1.05rem;font-weight:700;font-family:'Cormorant Garamond',serif;}
+.ecard .es{font-size:0.6rem;margin-top:3px;text-transform:uppercase;letter-spacing:.7px;font-weight:600;color:var(--muted);}
+.ecard.done .en{color:var(--green);}
+.ecard.done .es{color:var(--green);}
+.ecard.done::after{content:'✓';position:absolute;top:4px;right:6px;font-size:.7rem;color:var(--green);font-weight:700;}
+.ecard{position:relative;}
+/* PANEL */
+.epanel{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:26px;animation:fu .3s ease both;}
+.ptop{display:flex;align-items:center;justify-content:space-between;margin-bottom:20px;flex-wrap:wrap;gap:8px;}
+.ptop h3{font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:700;}
+.tag{font-size:0.67rem;padding:3px 10px;border-radius:20px;font-weight:600;letter-spacing:.7px;text-transform:uppercase;}
+.tag-r{background:rgba(88,166,255,.15);color:var(--reading);border:1px solid rgba(88,166,255,.3);}
+.tag-w{background:rgba(240,165,0,.15);color:var(--amber);border:1px solid rgba(240,165,0,.3);}
+.tag-l{background:rgba(188,140,255,.15);color:var(--listening);border:1px solid rgba(188,140,255,.3);}
+/* PASSAGE */
+.passage{background:var(--bg);border-left:3px solid var(--ac);padding:18px 22px;border-radius:0 9px 9px 0;font-size:0.9rem;line-height:1.85;color:#cdd9e5;margin-bottom:20px;max-height:320px;overflow-y:auto;}
+.passage::-webkit-scrollbar{width:4px;}
+.passage::-webkit-scrollbar-thumb{background:var(--border);border-radius:2px;}
+/* QUESTIONS */
+.qb{margin-bottom:20px;}
+.ql{font-weight:600;font-size:0.87rem;margin-bottom:9px;display:flex;align-items:flex-start;gap:7px;}
+.qn{display:inline-flex;align-items:center;justify-content:center;background:var(--ac);color:#000;width:20px;height:20px;min-width:20px;border-radius:50%;font-size:0.65rem;font-weight:700;margin-top:1px;}
+.opts{display:flex;flex-direction:column;gap:6px;margin-top:7px;}
+.opt{display:flex;align-items:center;gap:9px;padding:9px 12px;border:1px solid var(--border);border-radius:7px;cursor:pointer;font-size:0.84rem;transition:all .12s;color:var(--text);user-select:none;}
+.opt:hover{border-color:var(--ac);background:rgba(255,255,255,.03);}
+.opt.sel{border-color:var(--reading);background:rgba(88,166,255,.08);}
+.opt.correct{border-color:var(--green)!important;background:rgba(63,185,80,.1)!important;color:var(--green);}
+.opt.wrong{border-color:var(--red)!important;background:rgba(248,81,73,.08)!important;color:var(--red);}
+.ainp{width:100%;padding:9px 12px;background:var(--bg);border:1px solid var(--border);border-radius:7px;color:var(--text);font-family:'DM Sans',sans-serif;font-size:0.85rem;margin-top:7px;transition:border .12s;}
+.ainp:focus{outline:none;border-color:var(--ac);}
+.ainp.cok{border-color:var(--green)!important;}
+.ainp.cno{border-color:var(--red)!important;}
+/* BUTTONS */
+.btn{padding:10px 22px;border-radius:7px;font-family:'DM Sans',sans-serif;font-size:0.83rem;font-weight:600;cursor:pointer;border:none;transition:all .17s;}
+.btn-t{background:var(--teal);color:#000;}
+.btn-t:hover{background:var(--teal-dim);transform:translateY(-1px);}
+.btn-g{background:transparent;color:var(--muted);border:1px solid var(--border);}
+.btn-g:hover{border-color:var(--text);color:var(--text);}
+.brow{display:flex;gap:9px;flex-wrap:wrap;margin-top:20px;}
+/* RESULT */
+.rbox{margin-top:18px;padding:20px;border-radius:11px;border:1px solid;animation:fu .3s ease both;}
+.rbox.good{border-color:var(--green);background:rgba(63,185,80,.07);}
+.rbox.mid{border-color:var(--amber);background:rgba(240,165,0,.07);}
+.rbox.low{border-color:var(--red);background:rgba(248,81,73,.07);}
+.sbig{font-family:'Cormorant Garamond',serif;font-size:2.8rem;font-weight:700;line-height:1;}
+.slbl{font-size:0.68rem;color:var(--muted);letter-spacing:1px;text-transform:uppercase;margin-top:3px;}
+/* WRITING */
+textarea{width:100%;padding:13px;background:var(--bg);border:1px solid var(--border);border-radius:9px;color:var(--text);font-family:'DM Sans',sans-serif;font-size:0.88rem;line-height:1.7;resize:vertical;min-height:180px;transition:border .12s;}
+textarea:focus{outline:none;border-color:var(--amber);}
+.wcnt{font-size:0.75rem;color:var(--muted);margin-top:5px;text-align:right;}
+.btbl{width:100%;border-collapse:collapse;font-size:0.82rem;margin-top:12px;}
+.btbl th{background:var(--surface2);color:var(--teal);padding:9px 12px;text-align:left;border-bottom:1px solid var(--border);}
+.btbl td{padding:9px 12px;border-bottom:1px solid var(--border);}
+/* LISTENING */
+.ttsbar{display:flex;align-items:center;gap:12px;background:var(--surface2);border:1px solid var(--border);padding:14px 18px;border-radius:11px;margin-bottom:16px;}
+.pbtn{width:44px;height:44px;border-radius:50%;background:var(--listening);color:#000;border:none;cursor:pointer;font-size:1rem;flex-shrink:0;display:flex;align-items:center;justify-content:center;transition:background .14s;}
+.pbtn:hover{background:#a06de0;}
+.tinfo{flex:1;}
+.ttl{font-weight:600;font-size:0.88rem;}
+.tsub{font-size:0.72rem;color:var(--muted);margin-top:2px;}
+.prgb{flex:1;height:4px;background:var(--border);border-radius:2px;overflow:hidden;}
+.prgf{height:100%;background:var(--listening);width:0%;transition:width .3s;border-radius:2px;}
+.ssel{background:var(--bg);border:1px solid var(--border);color:var(--text);padding:5px 9px;border-radius:6px;font-family:'DM Sans',sans-serif;font-size:0.75rem;cursor:pointer;}
+.trbtn{font-size:0.75rem;color:var(--muted);cursor:pointer;padding:6px 12px;border:1px solid var(--border);border-radius:6px;background:none;font-family:'DM Sans',sans-serif;transition:all .12s;margin-bottom:12px;}
+.trbtn:hover{border-color:var(--text);color:var(--text);}
+/* WRITING FEEDBACK */
+.fb{padding:9px 12px;border-radius:7px;font-size:0.82rem;line-height:1.55;margin-bottom:7px;}
+.fbg{background:rgba(63,185,80,.1);border-left:3px solid var(--green);}
+.fbw{background:rgba(240,165,0,.1);border-left:3px solid var(--amber);}
+.fbb{background:rgba(248,81,73,.1);border-left:3px solid var(--red);}
+.hidden{display:none!important;}
+@media(max-width:640px){.sgrid{grid-template-columns:1fr;}.egrid{grid-template-columns:repeat(4,1fr);}.hero h1{font-size:2rem;}.epanel{padding:16px;}}
+</style>
+</head>
+<body>
+<div id="authWrap" class="hidden"></div>
+<div id="app" class="hidden">
+<header>
+  <div class="logo" onclick="goHome()">KRUPA <em>IELTS PREP</em></div>
+  <div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap">
+    <div class="date-pill" id="dpill"></div>
+    <div id="userChip"></div>
+  </div>
+</header>
+<nav>
+  <button class="ntab active" id="nt0" onclick="showSec('home')">🏠 Home</button>
+  <button class="ntab" id="nt1" onclick="showSec('reading')">📖 Reading <span class="nbadge" id="rb">0/20</span></button>
+  <button class="ntab" id="nt2" onclick="showSec('writing')">✍️ Writing <span class="nbadge" style="background:var(--amber)" id="wb">0/20</span></button>
+  <button class="ntab" id="nt3" onclick="showSec('listening')">🎧 Listening <span class="nbadge" style="background:var(--listening)" id="lb">0/20</span></button>
+</nav>
+<main id="main"></main>
+
+<script>
+// ══════════════════════════════════════
+// ALL 20 READING EXERCISES (pre-written)
+// ══════════════════════════════════════
+const READING = [
+{title:"The Science of Sleep",text:`Sleep is a fundamental biological process that affects nearly every system in the human body. Despite spending roughly one-third of our lives asleep, scientists are still uncovering the complex mechanisms that govern this essential state. Research over the past two decades has revolutionised our understanding of what actually happens during sleep.\n\nThe brain cycles through several distinct stages during a typical night's sleep. The two main categories are non-rapid eye movement (NREM) sleep and rapid eye movement (REM) sleep. During NREM sleep, the body repairs tissues, builds bone and muscle, and strengthens the immune system. REM sleep, by contrast, is associated with dreaming and plays a critical role in memory consolidation and emotional regulation.\n\nChronic sleep deprivation has been linked to a wide range of health problems. Studies have demonstrated that consistently sleeping fewer than seven hours per night increases the risk of obesity, type 2 diabetes, cardiovascular disease, and certain mental health disorders. The immune system also suffers: people who sleep less than six hours are four times more likely to catch a common cold when exposed to the virus than those who sleep seven or more hours.\n\nModern lifestyles pose significant challenges to healthy sleep. Artificial light, particularly the blue light emitted by smartphones and computers, suppresses the production of melatonin — the hormone that regulates the sleep-wake cycle. Researchers recommend avoiding screens for at least one hour before bedtime and keeping bedroom environments dark, cool, and quiet.\n\nInterestingly, the amount of sleep needed varies across the lifespan. Newborns require up to 17 hours daily, while teenagers need approximately 8 to 10 hours. Most adults function best with 7 to 9 hours, and older adults often find that 7 to 8 hours is sufficient. Individual variation exists, however, and a small percentage of people carry genetic mutations that allow them to thrive on as little as four to six hours per night.`,
+questions:[
+{type:"tfng",q:"Scientists now fully understand all mechanisms that govern sleep.",answer:"FALSE",options:["TRUE","FALSE","NOT GIVEN"]},
+{type:"tfng",q:"REM sleep plays a role in memory consolidation.",answer:"TRUE",options:["TRUE","FALSE","NOT GIVEN"]},
+{type:"tfng",q:"Blue light from screens increases melatonin production.",answer:"FALSE",options:["TRUE","FALSE","NOT GIVEN"]},
+{type:"mcq",q:"How much more likely are people sleeping under 6 hours to catch a cold?",options:["Twice as likely","Three times as likely","Four times as likely","Five times as likely"],answer:"Four times as likely"},
+{type:"mcq",q:"How many hours of sleep do most adults need per night?",options:["5–6 hours","6–7 hours","7–9 hours","9–11 hours"],answer:"7–9 hours"},
+{type:"short",q:"What hormone regulates the sleep-wake cycle?",answer:"melatonin"},
+{type:"short",q:"What are the two main categories of sleep mentioned in the passage?",answer:"NREM and REM"}
+]},
+{title:"Urban Farming and Food Security",text:`As the global population edges towards ten billion by 2050, the question of how to feed everyone sustainably has become one of the defining challenges of our time. Urban farming — the practice of cultivating food within city boundaries — is increasingly being championed as part of the solution.\n\nThe concept is far from new. During World War II, victory gardens in the United States and United Kingdom produced approximately 40% of the vegetables consumed domestically. Today, however, urban agriculture has evolved dramatically. Rooftop gardens, vertical farms, hydroponic systems, and community plots are transforming idle urban spaces into productive food sources.\n\nVertical farming is among the most technologically sophisticated approaches. Crops are grown in stacked layers inside climate-controlled warehouses, often using LED lighting and hydroponic or aeroponic systems that eliminate the need for soil. Proponents argue that vertical farms can produce up to 100 times more food per square metre than conventional agriculture. They also use up to 95% less water, generate no agricultural runoff, and can operate year-round regardless of weather conditions.\n\nDespite these advantages, urban farming faces significant challenges. The energy costs of artificial lighting and climate control can be substantial, raising questions about the net environmental benefit. Land in cities is expensive and often contested, and zoning regulations may restrict agricultural use. Not all crops are economically viable — leafy greens and herbs thrive in vertical systems, but staple crops such as wheat and rice remain impractical to grow indoors at scale.\n\nNevertheless, urban farming offers social as well as ecological benefits. Community gardens have been shown to strengthen neighbourhood cohesion, provide therapeutic value, and improve access to fresh produce in food deserts — areas with limited availability of affordable, nutritious food.`,
+questions:[
+{type:"tfng",q:"Victory gardens during World War II produced 40% of domestically consumed vegetables.",answer:"TRUE",options:["TRUE","FALSE","NOT GIVEN"]},
+{type:"tfng",q:"Vertical farms require large amounts of water compared to conventional farming.",answer:"FALSE",options:["TRUE","FALSE","NOT GIVEN"]},
+{type:"tfng",q:"Urban farming is legally permitted in all cities worldwide.",answer:"NOT GIVEN",options:["TRUE","FALSE","NOT GIVEN"]},
+{type:"mcq",q:"How much more food per square metre can vertical farms produce compared to conventional agriculture?",options:["Up to 10 times more","Up to 50 times more","Up to 100 times more","Up to 200 times more"],answer:"Up to 100 times more"},
+{type:"mcq",q:"Which crops are described as impractical to grow indoors at scale?",options:["Herbs and salad leaves","Tomatoes and peppers","Wheat and rice","Mushrooms and spinach"],answer:"Wheat and rice"},
+{type:"short",q:"What term describes areas with limited access to affordable, nutritious food?",answer:"food deserts"},
+{type:"short",q:"What percentage less water do vertical farms use compared to conventional agriculture?",answer:"95%"}
+]},
+{title:"The Psychology of Decision Making",text:`Every day, humans make thousands of decisions, from trivial choices like what to eat for breakfast to momentous ones like career changes or financial investments. Psychologists have long sought to understand how these decisions are made and why humans are so often irrational in their choices.\n\nThe traditional economic model assumed that people are rational actors who carefully weigh costs and benefits before making optimal decisions. This view was fundamentally challenged in the 1970s by psychologists Daniel Kahneman and Amos Tversky, whose research on cognitive biases demonstrated that human judgment is systematically flawed in predictable ways.\n\nKahneman later described two systems of thinking in his influential work. System 1 is fast, intuitive, and emotional — it operates automatically and effortlessly. System 2 is slow, deliberate, and logical — it requires conscious effort and mental energy. Most daily decisions rely on System 1, which, while efficient, is prone to errors and biases.\n\nOne of the most well-documented biases is loss aversion: the tendency to feel the pain of losses more acutely than the pleasure of equivalent gains. Research suggests that losses feel approximately twice as powerful as gains of the same magnitude. This explains why people often hold on to failing investments far longer than rational analysis would suggest — the anticipated pain of selling at a loss outweighs the logical benefits of cutting one's losses.\n\nAnchoring is another pervasive bias. When making estimates or decisions, people rely too heavily on the first piece of information they receive — the anchor — even when that information is irrelevant. In one famous experiment, participants who spun a wheel that landed on a high number subsequently gave higher estimates for unrelated questions than those whose wheel landed on a low number.\n\nUnderstanding these biases has practical applications in fields ranging from public health to financial planning, as policymakers design environments — or nudges — that guide people towards better decisions without restricting their freedom of choice.`,
+questions:[
+{type:"tfng",q:"Kahneman and Tversky's research supported the traditional economic model of rational decision-making.",answer:"FALSE",options:["TRUE","FALSE","NOT GIVEN"]},
+{type:"tfng",q:"System 2 thinking requires more mental effort than System 1.",answer:"TRUE",options:["TRUE","FALSE","NOT GIVEN"]},
+{type:"tfng",q:"All cognitive biases can be eliminated through education.",answer:"NOT GIVEN",options:["TRUE","FALSE","NOT GIVEN"]},
+{type:"mcq",q:"According to the passage, how much more powerful do losses feel compared to equivalent gains?",options:["Equally powerful","Approximately 1.5 times","Approximately twice","Three times"],answer:"Approximately twice"},
+{type:"mcq",q:"What is the term for the bias where people rely too heavily on the first piece of information received?",options:["Loss aversion","Anchoring","Confirmation bias","Framing effect"],answer:"Anchoring"},
+{type:"short",q:"What name did Kahneman give to the fast, intuitive system of thinking?",answer:"System 1"},
+{type:"short",q:"What term describes environmental design that guides people towards better decisions?",answer:"nudges"}
+]},
+{title:"Ocean Plastic Pollution",text:`The world's oceans are in crisis. Every year, an estimated eight million tonnes of plastic waste enters the marine environment — the equivalent of dumping one garbage truck of plastic into the sea every minute. This pollution poses a catastrophic threat to marine ecosystems, wildlife, and ultimately human health.\n\nPlastic is exceptionally durable. Most plastic products that enter the ocean do not biodegrade; instead, they break down into progressively smaller fragments known as microplastics — particles smaller than five millimetres in diameter. These microscopic pieces have been found in the deepest ocean trenches, the most remote Arctic ice, and in the bodies of marine animals from tiny zooplankton to blue whales.\n\nThe impact on marine wildlife is severe. Sea turtles frequently mistake plastic bags for jellyfish, their primary food source, and can die from intestinal blockages. Seabirds feed plastic debris to their chicks, leading to malnutrition and death. Studies of albatrosses on Midway Atoll have found that virtually every chick contains plastic in its stomach, ingested from food brought by parents foraging thousands of kilometres away.\n\nFor humans, the risks are increasingly concerning. Microplastics have been detected in human blood, lung tissue, and breast milk. While the long-term health effects remain under investigation, many plastics contain chemical additives — including endocrine disruptors — that have known harmful effects on biological systems.\n\nSolutions require action at multiple levels. At the individual level, reducing single-use plastic consumption makes a meaningful difference. At the corporate level, redesigning products and packaging for recyclability is essential. At the policy level, extended producer responsibility legislation — which holds manufacturers financially responsible for the end-of-life management of their products — has shown promise in reducing plastic waste in countries where it has been implemented.`,
+questions:[
+{type:"tfng",q:"Eight million tonnes of plastic enters the ocean annually.",answer:"TRUE",options:["TRUE","FALSE","NOT GIVEN"]},
+{type:"tfng",q:"Microplastics biodegrade quickly in salt water.",answer:"FALSE",options:["TRUE","FALSE","NOT GIVEN"]},
+{type:"tfng",q:"Extended producer responsibility laws exist in every country.",answer:"NOT GIVEN",options:["TRUE","FALSE","NOT GIVEN"]},
+{type:"mcq",q:"What size are microplastic particles?",options:["Smaller than 1mm","Smaller than 5mm","Smaller than 1cm","Smaller than 5cm"],answer:"Smaller than 5mm"},
+{type:"mcq",q:"What do sea turtles mistake plastic bags for?",options:["Seaweed","Fish","Jellyfish","Squid"],answer:"Jellyfish"},
+{type:"short",q:"Where have microplastics been found in the human body? (name one)",answer:"blood / lung tissue / breast milk"},
+{type:"short",q:"What legislation holds manufacturers responsible for end-of-life product management?",answer:"extended producer responsibility"}
+]},
+{title:"The History of Antibiotics",text:`Few medical discoveries have saved more lives than antibiotics. Before their introduction, bacterial infections that today are easily treated — pneumonia, scarlet fever, infected wounds — were frequently fatal. The story of antibiotics begins in 1928 with Alexander Fleming's accidental observation that a mould contaminating one of his bacterial cultures was killing the surrounding bacteria.\n\nFleming identified the mould as Penicillium notatum and named the antibacterial substance it produced penicillin. However, he struggled to produce it in sufficient quantities and the discovery sat largely dormant until the 1940s, when Howard Florey and Ernst Chain developed methods to purify and mass-produce penicillin. By 1944, penicillin was being manufactured in quantities sufficient to treat all wounded Allied soldiers — a development that historians credit with saving tens of thousands of lives during World War II.\n\nFollowing the success of penicillin, researchers developed many other classes of antibiotics throughout the 1950s and 1960s — a period sometimes called the golden age of antibiotic discovery. These drugs transformed medicine, making previously dangerous surgeries routine, enabling organ transplants, and allowing cancer chemotherapy that suppresses the immune system.\n\nHowever, bacteria evolve rapidly, and the overuse and misuse of antibiotics has accelerated the emergence of resistant strains. Antimicrobial resistance (AMR) is now considered one of the greatest threats to global health. The World Health Organisation has warned that without urgent action, drug-resistant infections could cause ten million deaths annually by 2050 — more than cancer currently kills each year.\n\nAddressing AMR requires reducing unnecessary antibiotic prescriptions, improving sanitation to prevent infections in the first place, investing in the development of new antibiotics, and educating the public about the importance of completing full courses of treatment rather than stopping when symptoms improve.`,
+questions:[
+{type:"tfng",q:"Alexander Fleming intentionally developed penicillin as part of a planned research project.",answer:"FALSE",options:["TRUE","FALSE","NOT GIVEN"]},
+{type:"tfng",q:"Penicillin was used to treat wounded soldiers during World War II.",answer:"TRUE",options:["TRUE","FALSE","NOT GIVEN"]},
+{type:"tfng",q:"All antibiotics discovered during the golden age are still effective today.",answer:"NOT GIVEN",options:["TRUE","FALSE","NOT GIVEN"]},
+{type:"mcq",q:"Who developed methods to purify and mass-produce penicillin?",options:["Fleming and Tversky","Florey and Chain","Fleming and Chain","Florey and Fleming"],answer:"Florey and Chain"},
+{type:"mcq",q:"How many deaths annually could drug-resistant infections cause by 2050 according to the WHO?",options:["One million","Five million","Ten million","Twenty million"],answer:"Ten million"},
+{type:"short",q:"What year did Alexander Fleming make his accidental discovery?",answer:"1928"},
+{type:"short",q:"What is the abbreviation for antimicrobial resistance?",answer:"AMR"}
+]},
+{title:"Renewable Energy Storage",text:`The rapid expansion of solar and wind energy has created one of the central challenges of modern energy systems: storage. Unlike fossil fuel power plants, which can generate electricity on demand, solar panels and wind turbines produce energy only when the sun shines and the wind blows. Solving the storage problem is essential to achieving a fully renewable energy grid.\n\nLithium-ion batteries, the same technology used in smartphones and electric vehicles, currently dominate the grid-scale storage market. Their energy density, declining costs — which have fallen by more than 90% since 2010 — and rapid response times make them well-suited for short-term storage. However, lithium-ion batteries are typically designed to provide storage for four to eight hours, which is insufficient for handling multi-day periods of low solar and wind generation.\n\nLong-duration storage technologies are therefore attracting growing investment and research attention. Pumped hydropower — where water is pumped uphill during periods of excess electricity and released through turbines when demand rises — currently provides over 90% of global grid storage capacity. However, suitable sites for new pumped hydro projects are geographically limited.\n\nGreen hydrogen represents another promising approach. Surplus renewable electricity is used to split water into hydrogen and oxygen through electrolysis. The hydrogen can then be stored and later used in fuel cells or combustion to generate electricity. While the round-trip efficiency of hydrogen storage is currently lower than that of batteries, its potential for seasonal storage — preserving summer's solar energy for winter use — makes it strategically important.\n\nFlow batteries, compressed air energy storage, and even gravity-based systems using heavy weights and cranes are among the other technologies under development. The diversity of approaches reflects the scale of the challenge and the urgency of solving it as the world transitions away from fossil fuels.`,
+questions:[
+{type:"tfng",q:"Lithium-ion battery costs have fallen by more than 90% since 2010.",answer:"TRUE",options:["TRUE","FALSE","NOT GIVEN"]},
+{type:"tfng",q:"Pumped hydropower can be built anywhere in the world.",answer:"FALSE",options:["TRUE","FALSE","NOT GIVEN"]},
+{type:"tfng",q:"Green hydrogen currently has higher round-trip efficiency than batteries.",answer:"FALSE",options:["TRUE","FALSE","NOT GIVEN"]},
+{type:"mcq",q:"What percentage of global grid storage does pumped hydropower provide?",options:["Over 50%","Over 70%","Over 90%","100%"],answer:"Over 90%"},
+{type:"mcq",q:"What process is used to produce green hydrogen?",options:["Combustion","Electrolysis","Condensation","Fermentation"],answer:"Electrolysis"},
+{type:"short",q:"How many hours of storage do lithium-ion batteries typically provide?",answer:"4 to 8 hours"},
+{type:"short",q:"What is the key advantage of hydrogen for seasonal storage?",answer:"preserving summer solar energy for winter / long-term/seasonal storage"}
+]},
+{title:"The Neuroscience of Memory",text:`Memory is not a single, unified system but rather a collection of distinct processes distributed across different brain regions. Understanding how memories form, are stored, and are retrieved has been one of the most productive areas of neuroscience over the past half century.\n\nThe hippocampus, a seahorse-shaped structure deep within the temporal lobe, plays a central role in forming new declarative memories — memories for facts and events that can be consciously recalled. The famous case of patient H.M., who had his hippocampus surgically removed in 1953 to treat severe epilepsy, revealed this dramatically: he was permanently unable to form new long-term memories, though he retained memories from before the surgery and could learn new motor skills normally.\n\nAt the cellular level, memories are thought to form through a process called long-term potentiation (LTP). When neurons fire together repeatedly, the synaptic connections between them are strengthened, making it easier for the same pattern to fire in the future. This is captured in the phrase, attributed to neuropsychologist Donald Hebb: "neurons that fire together, wire together."\n\nMemories are not stored as fixed recordings but are reconstructed each time they are recalled. This reconstruction process means memories are vulnerable to distortion. Research by psychologist Elizabeth Loftus demonstrated that false memories can be implanted through suggestion: participants could be led to believe they had experienced events that never occurred, such as being lost in a shopping mall as a child.\n\nSleep plays a vital role in memory consolidation — the process by which new memories are stabilised and integrated with existing knowledge. During slow-wave sleep in particular, the brain replays experiences from the day, strengthening important memories and discarding irrelevant information.`,
+questions:[
+{type:"tfng",q:"The hippocampus is located in the frontal lobe of the brain.",answer:"FALSE",options:["TRUE","FALSE","NOT GIVEN"]},
+{type:"tfng",q:"Patient H.M. lost all memories from before his surgery.",answer:"FALSE",options:["TRUE","FALSE","NOT GIVEN"]},
+{type:"tfng",q:"Elizabeth Loftus showed that false memories can be created through suggestion.",answer:"TRUE",options:["TRUE","FALSE","NOT GIVEN"]},
+{type:"mcq",q:"What does LTP stand for in the context of memory formation?",options:["Long-term processing","Long-term potentiation","Lateral temporal pathway","Limbic transfer process"],answer:"Long-term potentiation"},
+{type:"mcq",q:"During which stage of sleep does memory consolidation primarily occur?",options:["REM sleep","Light sleep","Slow-wave sleep","Hypnagogic state"],answer:"Slow-wave sleep"},
+{type:"short",q:"What phrase is attributed to Donald Hebb about neuron connections?",answer:"neurons that fire together wire together"},
+{type:"short",q:"What type of memories does the hippocampus help form?",answer:"declarative memories"}
+]},
+{title:"Digital Privacy and Surveillance",text:`The digital age has brought unprecedented convenience, but it has also enabled a scale of personal data collection that raises profound questions about privacy, autonomy, and power. Every search query, online purchase, location ping, and social media interaction generates data that is routinely collected, analysed, and monetised by corporations and, in some cases, governments.\n\nThe business model of many internet platforms depends on advertising revenue, which in turn depends on delivering targeted advertisements to users based on their behaviour and preferences. This requires the continuous collection of personal data. Critics argue that users rarely understand the full extent of data collection when they agree to terms of service, which are typically long, complex documents that few people read in full.\n\nGovernment surveillance raises different but equally serious concerns. Following the 2013 revelations by former National Security Agency contractor Edward Snowden, it became clear that intelligence agencies in the United States and allied countries were conducting mass surveillance programmes that collected communications data on millions of ordinary citizens without individual warrants.\n\nChina's social credit system, still widely misunderstood in Western media, represents a different model: a collection of government and private-sector schemes that rate citizens' and businesses' compliance with laws and regulations. Supporters argue it improves trust in commercial transactions; critics describe it as authoritarian control over behaviour.\n\nIn response to growing concerns, the European Union introduced the General Data Protection Regulation (GDPR) in 2018 — widely regarded as the world's strongest data privacy law. It grants individuals the right to access their data, correct inaccuracies, and in certain circumstances, demand its deletion — the so-called "right to be forgotten." Companies found in violation face fines of up to four percent of annual global turnover.`,
+questions:[
+{type:"tfng",q:"Edward Snowden was a former employee of a private company contracted to the NSA.",answer:"TRUE",options:["TRUE","FALSE","NOT GIVEN"]},
+{type:"tfng",q:"The GDPR was introduced in 2015.",answer:"FALSE",options:["TRUE","FALSE","NOT GIVEN"]},
+{type:"tfng",q:"China's social credit system is universally condemned by Chinese citizens.",answer:"NOT GIVEN",options:["TRUE","FALSE","NOT GIVEN"]},
+{type:"mcq",q:"What can companies be fined under GDPR for violations?",options:["Up to 2% of global turnover","Up to 4% of global turnover","Up to 10% of global turnover","A fixed €10 million"],answer:"Up to 4% of global turnover"},
+{type:"mcq",q:"What does GDPR stand for?",options:["Global Data Privacy Regulation","General Data Protection Regulation","Government Digital Privacy Rights","General Digital Protection Rules"],answer:"General Data Protection Regulation"},
+{type:"short",q:"What is the informal name for the right to demand deletion of personal data?",answer:"right to be forgotten"},
+{type:"short",q:"What year were Edward Snowden's revelations made public?",answer:"2013"}
+]},
+{title:"Biodiversity and Ecosystems",text:`Biodiversity — the variety of life on Earth — is the foundation upon which all ecosystems, and ultimately human civilisation, depend. Scientists estimate that Earth is home to between eight and ten million species, of which fewer than two million have been formally described. Yet this extraordinary diversity is under unprecedented threat.\n\nThe current rate of species extinction is estimated to be between 100 and 1,000 times higher than the natural background rate. Many scientists refer to this as the sixth mass extinction event in Earth's history — the previous five having been caused by catastrophic natural events such as asteroid impacts and volcanic eruptions. The current crisis, by contrast, is driven almost entirely by human activity.\n\nHabitat destruction is the leading cause of biodiversity loss. The conversion of forests, wetlands, and grasslands to agricultural land has eliminated or degraded habitats for countless species. The Amazon rainforest, which contains approximately 10% of all species on Earth, has lost around 17% of its original cover due to deforestation, primarily for cattle ranching and soya cultivation.\n\nBiodiversity loss matters far beyond the ethical dimension of protecting other species. Ecosystems provide services that underpin human survival: clean water filtration, air purification, pollination of crops, climate regulation, and the provision of genetic resources for medicine and agriculture. It is estimated that natural pollination services alone are worth over $200 billion annually to global food production.\n\nConservation strategies include the designation of protected areas, restoration of degraded habitats, reintroduction of locally extinct species, and international agreements such as the Convention on Biological Diversity. Scientists increasingly emphasise that conservation cannot succeed in isolation from addressing poverty, land rights, and economic incentives that drive habitat destruction.`,
+questions:[
+{type:"tfng",q:"Fewer than two million species have been formally identified.",answer:"TRUE",options:["TRUE","FALSE","NOT GIVEN"]},
+{type:"tfng",q:"The current mass extinction is primarily caused by natural events.",answer:"FALSE",options:["TRUE","FALSE","NOT GIVEN"]},
+{type:"tfng",q:"The Amazon has lost 17% of its original forest cover.",answer:"TRUE",options:["TRUE","FALSE","NOT GIVEN"]},
+{type:"mcq",q:"What is the estimated value of natural pollination services to global food production annually?",options:["Over $50 billion","Over $100 billion","Over $200 billion","Over $500 billion"],answer:"Over $200 billion"},
+{type:"mcq",q:"What is described as the leading cause of biodiversity loss?",options:["Climate change","Pollution","Habitat destruction","Invasive species"],answer:"Habitat destruction"},
+{type:"short",q:"How many times higher is the current extinction rate than the natural background rate?",answer:"100 to 1,000 times"},
+{type:"short",q:"What international agreement is mentioned as a conservation strategy?",answer:"Convention on Biological Diversity"}
+]},
+{title:"Space Tourism",text:`For most of human history, the idea of ordinary citizens travelling to space was confined to science fiction. The twenty-first century has transformed that fiction into a nascent industry. Commercial space tourism, once the exclusive domain of government astronauts, is now becoming accessible — albeit at extraordinary cost — to private individuals.\n\nThe modern era of space tourism began in 2001 when American businessman Dennis Tito paid approximately $20 million for an eight-day stay aboard the International Space Station, becoming the first private citizen to travel to space. Since then, the landscape has changed dramatically. Companies including SpaceX, Blue Origin, and Virgin Galactic have invested billions in developing vehicles capable of carrying private passengers beyond Earth's atmosphere.\n\nTwo distinct tiers of space tourism have emerged. Suborbital flights, offered by companies such as Blue Origin and Virgin Galactic, carry passengers to the edge of space — technically defined as 100 kilometres above Earth — for several minutes of weightlessness before returning. These experiences are priced at between $250,000 and $500,000 per seat. Orbital experiences, which involve actually circling Earth, are far more expensive: SpaceX has charged customers tens of millions of dollars per seat.\n\nProponents argue that commercial space tourism will drive technological innovation, reduce launch costs through competition, and ultimately enable human expansion beyond Earth. Critics raise concerns about the environmental cost — rocket launches produce significant carbon emissions and may damage the stratosphere — and question whether vast resources should be directed towards space tourism while pressing problems on Earth remain unsolved.\n\nThe regulatory framework for commercial spaceflight is still evolving. In the United States, the Federal Aviation Administration oversees commercial launch licences, but the industry largely operates under an "informed consent" model, where passengers acknowledge the risks rather than receiving the full regulatory protection accorded to commercial airline passengers.`,
+questions:[
+{type:"tfng",q:"Dennis Tito was the first private citizen to travel to space.",answer:"TRUE",options:["TRUE","FALSE","NOT GIVEN"]},
+{type:"tfng",q:"Space is technically defined as beginning 100 kilometres above Earth.",answer:"TRUE",options:["TRUE","FALSE","NOT GIVEN"]},
+{type:"tfng",q:"All space tourism companies charge the same price for their flights.",answer:"FALSE",options:["TRUE","FALSE","NOT GIVEN"]},
+{type:"mcq",q:"How much did Dennis Tito pay for his trip to the ISS?",options:["Approximately $5 million","Approximately $10 million","Approximately $20 million","Approximately $50 million"],answer:"Approximately $20 million"},
+{type:"mcq",q:"Which US body oversees commercial launch licences?",options:["NASA","The Department of Defense","The Federal Aviation Administration","The Department of Commerce"],answer:"The Federal Aviation Administration"},
+{type:"short",q:"What is the price range for a suborbital flight ticket?",answer:"$250,000 to $500,000"},
+{type:"short",q:"What model governs passenger protection in commercial spaceflight?",answer:"informed consent"}
+]},
+{title:"Gut Microbiome and Health",text:`Within the human digestive tract lives an extraordinary ecosystem of approximately 38 trillion microorganisms — bacteria, viruses, fungi, and other microbes — collectively known as the gut microbiome. Research over the past decade has revealed that this internal ecosystem plays a far more profound role in human health than previously imagined.\n\nThe gut microbiome aids digestion by breaking down complex carbohydrates and dietary fibre that human enzymes cannot process. In doing so, gut bacteria produce short-chain fatty acids, which provide energy for the cells lining the colon and help regulate inflammation throughout the body. A diverse microbiome — one containing a wide variety of microbial species — is generally associated with better health outcomes.\n\nPerhaps most surprisingly, scientists have discovered a two-way communication pathway between the gut and the brain, known as the gut-brain axis. The gut contains approximately 500 million neurons and produces around 90% of the body's serotonin — a neurotransmitter associated with mood regulation. Research in both animal models and humans has linked the composition of the gut microbiome to conditions including depression, anxiety, and autism spectrum disorder, though the mechanisms are complex and causality has not been definitively established.\n\nFactors that negatively affect the microbiome include the overuse of antibiotics, which kill beneficial bacteria alongside harmful ones, diets high in processed foods and low in fibre, chronic stress, and lack of physical activity. Conversely, a diet rich in diverse plant foods, fermented products such as yoghurt and kimchi, and adequate sleep are associated with a healthier microbiome.\n\nThe microbiome is established early in life, with birth method playing a role: babies born vaginally are colonised by their mother's vaginal and gut bacteria, while those born by caesarean section have different initial microbial communities. Breastfeeding further shapes microbiome development, providing both bacteria and prebiotic compounds that feed beneficial microbes.`,
+questions:[
+{type:"tfng",q:"The gut microbiome contains approximately 38 trillion microorganisms.",answer:"TRUE",options:["TRUE","FALSE","NOT GIVEN"]},
+{type:"tfng",q:"The gut produces around 90% of the body's serotonin.",answer:"TRUE",options:["TRUE","FALSE","NOT GIVEN"]},
+{type:"tfng",q:"Scientists have definitively proven that gut microbiome causes depression.",answer:"FALSE",options:["TRUE","FALSE","NOT GIVEN"]},
+{type:"mcq",q:"What are the substances produced when gut bacteria break down fibre?",options:["Amino acids","Short-chain fatty acids","Long-chain proteins","Simple sugars"],answer:"Short-chain fatty acids"},
+{type:"mcq",q:"What is the communication pathway between the gut and brain called?",options:["The neural highway","The vagal pathway","The gut-brain axis","The enteric circuit"],answer:"The gut-brain axis"},
+{type:"short",q:"How many neurons does the gut contain approximately?",answer:"500 million"},
+{type:"short",q:"Name one fermented food mentioned that supports a healthy microbiome.",answer:"yoghurt / kimchi"}
+]},
+{title:"Quantum Computing",text:`Quantum computing represents one of the most profound technological frontiers of the twenty-first century. While conventional computers process information in binary — representing data as bits that are either 0 or 1 — quantum computers exploit the principles of quantum mechanics to perform calculations in fundamentally different and potentially far more powerful ways.\n\nThe basic unit of quantum information is the qubit. Unlike classical bits, qubits can exist in a superposition of 0 and 1 simultaneously, thanks to the quantum mechanical principle of superposition. This means that a quantum computer with n qubits can process 2ⁿ states simultaneously. A system of 300 qubits, for instance, could theoretically represent more states simultaneously than there are atoms in the observable universe.\n\nA second quantum phenomenon exploited by quantum computers is entanglement, where two or more qubits become correlated such that the state of one instantly influences the state of the other, regardless of the distance between them. This property allows quantum computers to perform certain computations with unprecedented efficiency.\n\nDespite enormous investment from companies including IBM, Google, and Microsoft, as well as national governments, practical quantum computing remains in its early stages. Current quantum computers are highly error-prone, requiring extremely cold operating temperatures — close to absolute zero — and are very sensitive to interference from the surrounding environment, a challenge known as decoherence.\n\nThe applications that excite researchers most include drug discovery and materials science, where quantum computers could simulate molecular interactions with a precision impossible for classical machines; breaking current encryption systems; and optimising complex logistical networks. Governments worldwide have begun investing heavily in quantum technology, recognising that leadership in this field may confer significant strategic and economic advantages.`,
+questions:[
+{type:"tfng",q:"Classical computers use qubits to process information.",answer:"FALSE",options:["TRUE","FALSE","NOT GIVEN"]},
+{type:"tfng",q:"Quantum computers currently operate at temperatures close to absolute zero.",answer:"TRUE",options:["TRUE","FALSE","NOT GIVEN"]},
+{type:"tfng",q:"Quantum computers are already widely used in hospitals for medical diagnosis.",answer:"NOT GIVEN",options:["TRUE","FALSE","NOT GIVEN"]},
+{type:"mcq",q:"What quantum property allows a qubit to be 0 and 1 simultaneously?",options:["Entanglement","Decoherence","Superposition","Interference"],answer:"Superposition"},
+{type:"mcq",q:"What is the challenge called when quantum computers are disrupted by environmental interference?",options:["Superposition","Entanglement","Decoherence","Bit-flip"],answer:"Decoherence"},
+{type:"short",q:"What is the basic unit of quantum information?",answer:"qubit"},
+{type:"short",q:"Name one potential application of quantum computing mentioned in the passage.",answer:"drug discovery / breaking encryption / materials science / logistics optimisation"}
+]},
+{title:"The Impact of Social Media",text:`Social media platforms have transformed how billions of people communicate, consume information, and perceive themselves and the world around them. Since Facebook launched to the general public in 2006, followed by Twitter, Instagram, YouTube, TikTok, and others, these platforms have reshaped public discourse, political campaigns, business models, and personal relationships.\n\nResearch on the psychological effects of social media has produced mixed findings. Some studies link heavy social media use to increased rates of anxiety, depression, and loneliness, particularly among adolescents. One proposed mechanism is social comparison: platforms are designed to showcase idealised versions of users' lives, and constant exposure to others' apparent success and happiness can damage self-esteem. The "like" system activates dopamine pathways in the brain, creating feedback loops that encourage compulsive checking behaviour.\n\nHowever, social media also provides genuine benefits. For marginalised communities, online spaces can offer connection, solidarity, and visibility unavailable in their immediate physical environments. Social movements such as #MeToo and Black Lives Matter gained global momentum through social media, demonstrating its power to accelerate social change. During natural disasters and public health crises, platforms have facilitated rapid information sharing and coordination of aid.\n\nThe spread of misinformation represents one of the most serious challenges associated with social media. Algorithms designed to maximise engagement tend to amplify emotionally provocative content, regardless of its accuracy. Research has found that false news spreads faster and more widely than true news on Twitter, partly because novelty drives sharing behaviour.\n\nRegulators worldwide are grappling with how to govern these platforms without stifling free expression. The European Union's Digital Services Act, which came into force in 2023, imposes new obligations on large platforms regarding content moderation, algorithmic transparency, and user rights — representing the most comprehensive attempt yet to regulate social media at scale.`,
+questions:[
+{type:"tfng",q:"Facebook launched to the general public in 2006.",answer:"TRUE",options:["TRUE","FALSE","NOT GIVEN"]},
+{type:"tfng",q:"Research has conclusively shown that social media always causes depression.",answer:"FALSE",options:["TRUE","FALSE","NOT GIVEN"]},
+{type:"tfng",q:"The EU's Digital Services Act came into force in 2023.",answer:"TRUE",options:["TRUE","FALSE","NOT GIVEN"]},
+{type:"mcq",q:"What mechanism is proposed to explain how social media damages self-esteem?",options:["Information overload","Social comparison","Digital addiction","Filter bubbles"],answer:"Social comparison"},
+{type:"mcq",q:"What does research show about false news on Twitter compared to true news?",options:["It spreads more slowly","It spreads at the same rate","It spreads faster and more widely","It is quickly corrected"],answer:"It spreads faster and more widely"},
+{type:"short",q:"What brain chemical is activated by the 'like' system on social media?",answer:"dopamine"},
+{type:"short",q:"Name one social movement mentioned that gained momentum through social media.",answer:"#MeToo / Black Lives Matter"}
+]},
+{title:"Volcanic Eruptions and Climate",text:`Volcanoes are among the most powerful forces on Earth, capable of reshaping landscapes, threatening ecosystems, and influencing global climate patterns. While individual eruptions can cause immediate local devastation, large-scale volcanic events have historically triggered significant and long-lasting changes to Earth's climate system.\n\nThe mechanism through which volcanoes affect climate is primarily atmospheric. During major eruptions, vast quantities of sulphur dioxide are injected into the stratosphere, where they react with water vapour to form sulphate aerosols. These tiny reflective particles scatter incoming solar radiation back into space, reducing the amount of sunlight reaching Earth's surface and causing temporary cooling — sometimes referred to as volcanic winter.\n\nThe 1815 eruption of Mount Tambora in Indonesia is the most dramatic modern example. It was the largest volcanic eruption in recorded history, ejecting an estimated 150 cubic kilometres of material. The following year, 1816, became known as "the Year Without a Summer": temperatures dropped significantly across the Northern Hemisphere, leading to widespread crop failures, famine, and social unrest. In New England, frost was recorded in every summer month.\n\nNot all volcanic effects cool the climate. Volcanoes also emit carbon dioxide, a greenhouse gas that traps heat. Over geological timescales, volcanic CO2 emissions have played a role in regulating Earth's long-term climate. During periods of intense volcanic activity associated with the formation of large igneous provinces, CO2 output has been linked to episodes of global warming and even mass extinction events.\n\nModern volcanology has advanced considerably. Monitoring networks of seismographs, GPS sensors, and gas detectors allow scientists to detect early warning signs of volcanic unrest and issue evacuations in time to save lives — though predicting the exact timing and magnitude of eruptions remains an imprecise science.`,
+questions:[
+{type:"tfng",q:"Mount Tambora erupted in 1815.",answer:"TRUE",options:["TRUE","FALSE","NOT GIVEN"]},
+{type:"tfng",q:"Sulphate aerosols absorb solar radiation and warm the atmosphere.",answer:"FALSE",options:["TRUE","FALSE","NOT GIVEN"]},
+{type:"tfng",q:"Volcanoes only release gases that cool the climate.",answer:"FALSE",options:["TRUE","FALSE","NOT GIVEN"]},
+{type:"mcq",q:"What year became known as 'the Year Without a Summer'?",options:["1814","1815","1816","1817"],answer:"1816"},
+{type:"mcq",q:"What gas do volcanoes emit that contributes to warming over geological timescales?",options:["Sulphur dioxide","Nitrogen","Carbon dioxide","Methane"],answer:"Carbon dioxide"},
+{type:"short",q:"What are the tiny reflective particles formed in the stratosphere after eruptions called?",answer:"sulphate aerosols"},
+{type:"short",q:"How much material did Mount Tambora eject?",answer:"150 cubic kilometres"}
+]},
+{title:"Rewilding and Ecosystem Restoration",text:`Rewilding — the large-scale restoration of wild areas to allow natural processes to resume — has emerged as one of the most ambitious and controversial conservation strategies of the twenty-first century. Moving beyond the traditional conservation model of protecting what remains, rewilding advocates for actively restoring what has been lost.\n\nThe concept gained scientific credibility through the work of ecologists studying trophic cascades — the chain reactions triggered through food webs when a keystone species is removed or restored. The reintroduction of wolves to Yellowstone National Park in 1995 is the most celebrated example. As wolf numbers recovered, they reduced overgrazing by deer, which allowed riverbank vegetation to regenerate, stabilised stream banks, changed the course of rivers, and increased habitat diversity for numerous other species — a phenomenon ecologists have called the "landscape of fear."\n\nIn Europe, rewilding projects have reintroduced beavers, lynx, bison, and white-tailed eagles to areas from which they had been absent for decades or centuries. Beavers in particular have proven extraordinarily effective ecosystem engineers: their dams slow water flow, raise water tables, create wetlands, and dramatically increase local biodiversity. Studies in Scotland have found that beaver-modified streams support significantly greater numbers of insects, fish, birds, and aquatic plants than unmodified streams.\n\nOpponents of rewilding raise practical concerns. Large predators such as wolves and lynx inevitably come into conflict with farmers and livestock owners, raising questions about compensation and coexistence. Rewilding also requires substantial land — a scarce resource competing with agriculture and human settlement.\n\nDespite these challenges, the scientific case for rewilding is strengthening. Restored ecosystems provide services including carbon sequestration, flood regulation, and clean water — benefits that can be quantified in economic terms and weighed against the costs of restoration.`,
+questions:[
+{type:"tfng",q:"Wolves were reintroduced to Yellowstone National Park in 1995.",answer:"TRUE",options:["TRUE","FALSE","NOT GIVEN"]},
+{type:"tfng",q:"Beavers have been shown to reduce biodiversity in streams they modify.",answer:"FALSE",options:["TRUE","FALSE","NOT GIVEN"]},
+{type:"tfng",q:"All farmers in Europe support large predator reintroduction.",answer:"NOT GIVEN",options:["TRUE","FALSE","NOT GIVEN"]},
+{type:"mcq",q:"What term describes the chain reactions through food webs triggered by keystone species?",options:["Ecosystem services","Trophic cascades","Habitat matrices","Ecological cascades"],answer:"Trophic cascades"},
+{type:"mcq",q:"What effect did wolves have on deer behaviour in Yellowstone?",options:["Eliminated all deer","Reduced overgrazing","Increased deer population","Caused deer migration"],answer:"Reduced overgrazing"},
+{type:"short",q:"What is the informal name given to the ecological phenomenon observed in Yellowstone?",answer:"landscape of fear"},
+{type:"short",q:"Name one benefit of restored ecosystems mentioned in the final paragraph.",answer:"carbon sequestration / flood regulation / clean water"}
+]},
+{title:"Language Extinction",text:`Of the approximately 7,000 languages spoken in the world today, linguists estimate that between 50 and 90% will be extinct or severely endangered by the end of the twenty-first century. A language dies, on average, every two weeks. This crisis of linguistic diversity is one of the least-discussed environmental and cultural emergencies of our time.\n\nLanguage extinction typically follows a predictable pattern. As speakers of a minority language are exposed to a dominant one — often through migration, education policy, or economic necessity — bilingualism increases. The next generation may speak both languages but favour the dominant one in public and professional settings. Eventually, children grow up speaking only the dominant language, and with the death of the last fluent speakers, the minority language is lost.\n\nColonialism has been a major driver of language extinction. European colonisation across the Americas, Africa, Asia, and Oceania often actively suppressed indigenous languages through policies that punished their use in schools and public life. In Australia, Aboriginal children were removed from their families in the early to mid-twentieth century partly to assimilate them into Anglo-Australian culture and language — a policy now widely condemned as cultural genocide.\n\nThe loss of a language represents a profound cultural tragedy. Languages encode unique ways of understanding the world: knowledge of local plants, animals, navigation techniques, ecological relationships, and social practices that may not exist in any written form. When a language dies, this knowledge often disappears with it.\n\nEfforts to revitalise endangered languages have met with mixed success. Welsh is frequently cited as a success story: aggressive government intervention, including mandatory Welsh instruction in schools and the creation of a Welsh-language television channel, has stabilised speaker numbers. By contrast, the revival of Hawaiian, once reduced to fewer than 2,000 speakers, has produced a new generation of fluent speakers through immersion schooling programmes.`,
+questions:[
+{type:"tfng",q:"A language dies approximately every two weeks.",answer:"TRUE",options:["TRUE","FALSE","NOT GIVEN"]},
+{type:"tfng",q:"Colonialism had no impact on language extinction.",answer:"FALSE",options:["TRUE","FALSE","NOT GIVEN"]},
+{type:"tfng",q:"All language revival efforts have been successful.",answer:"FALSE",options:["TRUE","FALSE","NOT GIVEN"]},
+{type:"mcq",q:"What percentage of languages may be extinct or endangered by the end of the 21st century?",options:["Between 10 and 30%","Between 30 and 50%","Between 50 and 90%","Almost 100%"],answer:"Between 50 and 90%"},
+{type:"mcq",q:"Which language is described as a success story in revitalisation?",options:["Irish","Welsh","Māori","Basque"],answer:"Welsh"},
+{type:"short",q:"How many languages are spoken in the world today approximately?",answer:"7,000"},
+{type:"short",q:"What type of schooling helped revive the Hawaiian language?",answer:"immersion schooling"}
+]},
+{title:"Aviation and Carbon Emissions",text:`Aviation accounts for approximately 2.5% of global CO2 emissions, a figure that may seem modest until one considers that flying is one of the most carbon-intensive activities an individual can undertake. A single return flight from London to New York produces roughly the same CO2 as three months of an average European's land-based emissions. The sector's rapid pre-pandemic growth and the particular impact of high-altitude emissions make aviation a significant and contested part of the climate challenge.\n\nJet aircraft burn kerosene, a refined petroleum product with no currently viable substitute at commercial scale. Unlike road transport, which is rapidly electrifying, aviation faces fundamental physical constraints: batteries capable of powering large commercial aircraft for long distances remain far beyond current technology. The energy density of even the most advanced lithium-ion batteries is approximately 50 times lower than that of jet fuel.\n\nSeveral pathways to decarbonising aviation are under development. Sustainable aviation fuels (SAFs) — produced from biomass, waste materials, or synthesised using renewable electricity — can be burned in existing engines and could reduce lifecycle emissions by up to 80% compared to conventional jet fuel. However, current SAF production meets only a tiny fraction of global aviation demand, and scaling production faces significant land-use and cost challenges.\n\nHydrogen-powered aircraft are being actively developed by companies including Airbus, which aims to bring a commercial hydrogen plane to market by 2035. Hydrogen is three times more energy-dense than jet fuel by weight, but its extremely low density by volume requires either heavy compression or cryogenic storage, creating significant engineering challenges.\n\nThe most immediate and effective way to reduce aviation's climate impact is to fly less. A phenomenon sometimes called "flight shame," which originated in Scandinavia, has encouraged some travellers to choose rail over air for shorter journeys. European rail investment and high-speed rail expansion are increasingly cited as essential complements to aviation decarbonisation.`,
+questions:[
+{type:"tfng",q:"Aviation accounts for approximately 2.5% of global CO2 emissions.",answer:"TRUE",options:["TRUE","FALSE","NOT GIVEN"]},
+{type:"tfng",q:"Electric batteries are currently a practical alternative for large commercial aircraft.",answer:"FALSE",options:["TRUE","FALSE","NOT GIVEN"]},
+{type:"tfng",q:"Airbus aims to bring a hydrogen plane to market by 2035.",answer:"TRUE",options:["TRUE","FALSE","NOT GIVEN"]},
+{type:"mcq",q:"By how much can sustainable aviation fuels reduce lifecycle emissions?",options:["Up to 40%","Up to 60%","Up to 80%","Up to 100%"],answer:"Up to 80%"},
+{type:"mcq",q:"Where did the 'flight shame' phenomenon originate?",options:["Germany","The Netherlands","Scandinavia","The United Kingdom"],answer:"Scandinavia"},
+{type:"short",q:"What fuel do current jet aircraft burn?",answer:"kerosene"},
+{type:"short",q:"How much more energy-dense is hydrogen than jet fuel by weight?",answer:"three times"}
+]},
+{title:"The History of the Internet",text:`The internet is so embedded in modern life that it is difficult to imagine a world without it. Yet its origins lie in the Cold War anxieties of the 1960s and the visionary thinking of a small group of computer scientists who laid the foundations for a global communication network.\n\nThe immediate precursor to the internet was ARPANET, developed by the United States Defense Advanced Research Projects Agency (DARPA) and launched in 1969. ARPANET connected computers at four American universities — UCLA, Stanford Research Institute, UC Santa Barbara, and the University of Utah — allowing researchers to share data and computing resources. The system used a technique called packet switching, which broke messages into small chunks that could travel independently across the network and be reassembled at their destination.\n\nThe fundamental protocols that define the modern internet — TCP/IP (Transmission Control Protocol/Internet Protocol) — were developed by Vint Cerf and Bob Kahn in the early 1970s. These protocols provided a universal language allowing different computer networks to communicate with each other. ARPANET adopted TCP/IP on 1 January 1983 — a date sometimes called the "birthday of the internet."\n\nThe internet remained primarily a tool for academics and researchers until 1991, when Tim Berners-Lee, a British scientist working at CERN, introduced the World Wide Web — a system of interconnected documents accessible through browsers using hyperlinks. The Web transformed the internet from a specialist tool into a mass medium.\n\nThe subsequent commercialisation of the internet during the 1990s, the dot-com boom and bust, the emergence of social media in the 2000s, and the rise of smartphones have collectively produced the interconnected digital world of today. An estimated five billion people — more than 60% of the global population — now have access to the internet.`,
+questions:[
+{type:"tfng",q:"ARPANET was launched in 1969.",answer:"TRUE",options:["TRUE","FALSE","NOT GIVEN"]},
+{type:"tfng",q:"TCP/IP was developed by Tim Berners-Lee.",answer:"FALSE",options:["TRUE","FALSE","NOT GIVEN"]},
+{type:"tfng",q:"The World Wide Web and the internet are the same thing.",answer:"NOT GIVEN",options:["TRUE","FALSE","NOT GIVEN"]},
+{type:"mcq",q:"What technique did ARPANET use to transmit messages?",options:["Circuit switching","Packet switching","Signal routing","Frame relay"],answer:"Packet switching"},
+{type:"mcq",q:"When did ARPANET adopt TCP/IP?",options:["1 January 1969","1 January 1975","1 January 1983","1 January 1991"],answer:"1 January 1983"},
+{type:"short",q:"Who introduced the World Wide Web?",answer:"Tim Berners-Lee"},
+{type:"short",q:"What percentage of the global population has internet access today?",answer:"over 60%"}
+]},
+{title:"Sustainable Fashion",text:`The fashion industry is one of the world's most polluting sectors, responsible for an estimated 10% of global carbon dioxide emissions annually — more than international aviation and shipping combined. It is also the second-largest consumer of water: producing a single pair of jeans requires approximately 7,500 litres — equivalent to around seven years of drinking water for one person. The rise of "fast fashion" — the mass production of inexpensive, trend-driven clothing designed for rapid disposal — has dramatically accelerated these environmental impacts.\n\nFast fashion companies such as Zara and H&M release dozens of new collections per year, compared to the two seasonal collections that were standard in the fashion industry a generation ago. Low prices are made possible by extensive global supply chains that typically locate manufacturing in countries where labour costs and environmental regulations are lowest. The collapse of the Rana Plaza garment factory in Bangladesh in 2013, which killed over 1,100 workers, became a catalyst for renewed scrutiny of labour conditions in the fashion supply chain.\n\nThe environmental damage extends beyond production. Synthetic fibres — polyester, nylon, and acrylic — account for around 60% of clothing materials globally. These fibres shed microplastics with every wash, with studies estimating that a single laundry load can release hundreds of thousands of plastic fibres into wastewater systems that filters cannot fully capture.\n\nSustainable fashion encompasses a range of alternatives: natural and organic fibres, recycled materials, circular business models where clothing is rented, repaired, or resold rather than discarded, and reduced consumption overall. Some brands have committed to ambitious sustainability targets, though critics accuse many of greenwashing — making misleading claims about environmental credentials.\n\nConsumer behaviour is shifting, particularly among younger generations. Second-hand platforms such as Vinted and Depop have grown rapidly, and rental fashion is gaining traction in formal and occasion-wear markets.`,
+questions:[
+{type:"tfng",q:"The fashion industry produces more carbon dioxide than international aviation and shipping combined.",answer:"TRUE",options:["TRUE","FALSE","NOT GIVEN"]},
+{type:"tfng",q:"The Rana Plaza collapse killed over 1,100 workers.",answer:"TRUE",options:["TRUE","FALSE","NOT GIVEN"]},
+{type:"tfng",q:"All sustainable fashion brands are completely free from greenwashing.",answer:"NOT GIVEN",options:["TRUE","FALSE","NOT GIVEN"]},
+{type:"mcq",q:"How much water is needed to produce a single pair of jeans?",options:["Approximately 750 litres","Approximately 7,500 litres","Approximately 75,000 litres","Approximately 750,000 litres"],answer:"Approximately 7,500 litres"},
+{type:"mcq",q:"What percentage of clothing materials globally are synthetic fibres?",options:["Around 20%","Around 40%","Around 60%","Around 80%"],answer:"Around 60%"},
+{type:"short",q:"What term describes misleading claims about a product's environmental credentials?",answer:"greenwashing"},
+{type:"short",q:"Name one second-hand fashion platform mentioned in the passage.",answer:"Vinted / Depop"}
+]}
+];
+
+// ══════════════════════════════════════
+// ALL 20 WRITING EXERCISES (pre-written)
+// ══════════════════════════════════════
+const WRITING = [
+{type:"Task 2",title:"Technology and Social Isolation",prompt:"Some people believe that modern technology has made people more isolated and less able to communicate effectively with others. Others argue that technology has improved communication and brought people closer together. Discuss both views and give your own opinion. Write at least 250 words.",chart:"",minWords:250,tips:["Address BOTH views clearly before giving your opinion","Use specific examples: video calls, social media, remote work","Structure: intro → view 1 → view 2 → your opinion → conclusion","Aim for 260–280 words for a safe margin"]},
+{type:"Task 1",title:"Global Smartphone Usage",prompt:"The bar chart below shows the percentage of people in five different countries who owned a smartphone in 2010, 2015, and 2022. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words.",chart:"📊 Chart Data: South Korea: 2010=27%, 2015=73%, 2022=95% | USA: 2010=25%, 2015=68%, 2022=85% | Brazil: 2010=14%, 2015=41%, 2022=76% | India: 2010=4%, 2015=17%, 2022=54% | Nigeria: 2010=3%, 2015=12%, 2022=39%",minWords:150,tips:["Report the overall trend first (all countries increased)","Highlight the highest and lowest in 2022","Compare two countries directly","Use past and present tense correctly","Aim for 165–180 words"]},
+{type:"Task 2",title:"Free University Education",prompt:"Some people argue that university education should be free and funded entirely by the government. Others believe that students should pay tuition fees since they are the primary beneficiaries of higher education. Discuss both views and give your opinion. Write at least 250 words.",chart:"",minWords:250,tips:["Acknowledge the economic burden argument for free education","Discuss graduate earnings and private benefit","Give a clear personal opinion with justification","Avoid listing — develop each point in a paragraph"]},
+{type:"Task 1",title:"Household Energy Consumption",prompt:"The pie charts below show how households in a European country used energy in 1990 and 2020. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words.",chart:"📊 Chart Data — 1990: Heating 63%, Hot Water 22%, Lighting 8%, Appliances 7% | 2020: Heating 42%, Hot Water 18%, Lighting 10%, Appliances 30%",minWords:150,tips:["Compare the two years for each category","Highlight the biggest change (appliances: 7%→30%)","Note what stayed relatively stable (lighting)","Use comparison language: whereas, while, compared to"]},
+{type:"Task 2",title:"Prison Sentences and Crime",prompt:"Some people believe that the best way to reduce crime is to give longer prison sentences. Others, however, believe that there are better ways to reduce crime. Discuss both views and give your opinion. Write at least 250 words.",chart:"",minWords:250,tips:["Deterrence argument: fear of long sentences may reduce crime","Counter: rehabilitation, poverty, education address root causes","Use evidence or examples: countries with low incarceration rates","State your view clearly and explain why"]},
+{type:"Task 1",title:"International Tourist Arrivals",prompt:"The line graph below shows the number of international tourist arrivals (in millions) to four regions between 2000 and 2020. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words.",chart:"📊 Chart Data: Asia Pacific: 2000=110m, 2010=205m, 2019=360m, 2020=85m | Europe: 2000=385m, 2010=475m, 2019=745m, 2020=235m | Americas: 2000=130m, 2010=150m, 2019=220m, 2020=69m | Africa: 2000=26m, 2010=50m, 2019=69m, 2020=18m",minWords:150,tips:["Europe consistently highest — mention this clearly","Note the dramatic drop in 2020 for all regions (COVID)","Asia Pacific showed strongest growth rate","Africa remained lowest throughout"]},
+{type:"Task 2",title:"Cars in Cities",prompt:"In many cities, there are serious problems caused by the increasing number of private cars. What are the main problems caused by too many cars in cities, and what measures could be taken to solve these problems? Write at least 250 words.",chart:"",minWords:250,tips:["Problems: congestion, pollution, accidents, parking, noise","Solutions: public transport, congestion charges, cycling infrastructure","Use cause-effect language: leads to, results in, causes","Don't just list — explain HOW each solution works"]},
+{type:"Task 1",title:"CO2 Emissions by Country",prompt:"The table below shows CO2 emissions per capita (tonnes) for six countries in 2000, 2010, and 2020. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words.",chart:"📊 Table Data (tonnes per capita): Australia: 2000=18.4, 2010=17.3, 2020=14.6 | USA: 2000=20.2, 2010=17.5, 2020=13.7 | Germany: 2000=10.8, 2010=9.7, 2020=7.7 | China: 2000=2.7, 2010=6.2, 2020=7.4 | India: 2000=0.9, 2010=1.4, 2020=1.9 | Brazil: 2000=2.1, 2010=2.3, 2020=2.2",minWords:150,tips:["Western countries decreased — China increased significantly","Note that USA was highest in 2000 and still high in 2020","India remained lowest throughout","China's rise is the most notable trend"]},
+{type:"Task 2",title:"Should Zoos Be Abolished?",prompt:"Some people believe that zoos are cruel and should be abolished, while others argue that zoos play an important role in protecting endangered species. Discuss both views and give your own opinion. Write at least 250 words.",chart:"",minWords:250,tips:["Against zoos: animal welfare, unnatural environments, stress","For zoos: conservation, breeding programmes, education, research","Distinguish between modern and outdated zoos","Give a nuanced opinion — perhaps reformed zoos are acceptable"]},
+{type:"Task 1",title:"How Paper is Recycled",prompt:"The diagram below shows the process of how waste paper is collected, processed, and turned into new paper products. Summarise the information by selecting and reporting the main features. Write at least 150 words.",chart:"📊 Process Stages: 1) Paper collected from households and offices in blue recycling bins → 2) Transported to recycling facility by lorry → 3) Sorted by type (newspaper, cardboard, office paper) → 4) Shredded and mixed with water to create pulp → 5) Pulp cleaned and filtered to remove ink and contaminants → 6) Pulp spread onto flat screens and dried → 7) Rolled into large sheets → 8) Cut and packaged as new paper products → 9) Distributed to shops and offices",minWords:150,tips:["Use passive voice: paper is collected, is transported","Describe stages in order using sequencing language","Mention start and end clearly","You do NOT need to give an opinion in Task 1"]},
+{type:"Task 2",title:"Remote Work Future",prompt:"Remote working has become increasingly common since the COVID-19 pandemic. Some people believe that working from home will become the dominant model of employment in the future. To what extent do you agree or disagree? Write at least 250 words.",chart:"",minWords:250,tips:["Consider both advantages (flexibility, commuting) and limits (collaboration, some jobs can't be remote)","Take a clear position: agree / partially agree / disagree","Acknowledge the counter-argument","Use hedging: it is likely that, it seems probable"]},
+{type:"Task 1",title:"Employment by Sector",prompt:"The bar chart below shows the percentage of the workforce employed in three sectors (agriculture, manufacturing, and services) in four countries in 2020. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words.",chart:"📊 Chart Data — Agriculture: UK=1%, Germany=2%, Brazil=15%, India=42% | Manufacturing: UK=18%, Germany=28%, Brazil=20%, India=25% | Services: UK=81%, Germany=70%, Brazil=65%, India=33%",minWords:150,tips:["The UK and Germany are highly service-dominated","India has the highest agricultural workforce","Manufacturing is relatively similar across countries","Contrast developing and developed nations"]},
+{type:"Task 2",title:"Advertising to Children",prompt:"Some people believe that advertising aimed at children should be banned, as it manipulates young people who cannot make rational decisions. Others argue that advertising is a normal part of commercial life and children must learn to deal with it. Discuss both views and give your own opinion. Write at least 250 words.",chart:"",minWords:250,tips:["Against: psychological vulnerability, obesity, materialism, pressure on parents","For: commercial reality, media literacy development","Consider regulations rather than outright ban","Support your view with logical reasoning"]},
+{type:"Task 1",title:"Average Temperatures 1950–2020",prompt:"The line graph below shows average global surface temperatures (°C above or below the 1951–1980 average) from 1950 to 2020. Summarise the information by selecting and reporting the main features. Write at least 150 words.",chart:"📊 Data points: 1950=-0.2°C, 1960=-0.1°C, 1970=0.0°C, 1980=+0.3°C, 1990=+0.45°C, 2000=+0.42°C, 2010=+0.72°C, 2020=+1.02°C (above 1951–1980 baseline)",minWords:150,tips:["Describe the clear upward trend","Note the acceleration after 1980","2020 is significantly above baseline","Use precise language: rose by, increased from X to Y"]},
+{type:"Task 2",title:"Wealth Gap Between Nations",prompt:"The gap between the richest and poorest nations in the world is growing. What are the main causes of this growing inequality, and what can be done to reduce it? Write at least 250 words.",chart:"",minWords:250,tips:["Causes: colonial legacy, trade imbalances, debt, corruption, geography","Solutions: fair trade, debt relief, aid, technology transfer","Use cause-effect linking words","Be specific — avoid vague statements like 'help poor countries'"]},
+{type:"Task 1",title:"University Tuition Fees",prompt:"The table below compares average annual university tuition fees (in USD) for domestic students in five countries in 2023. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words.",chart:"📊 Table Data — USA: $35,000 (private), $10,000 (public) | UK: $13,500 | Australia: $9,500 | Germany: $0 | France: $300",minWords:150,tips:["Clear contrast between USA and European countries","Germany and France are almost free — highlight this","Use comparatives: significantly higher, considerably lower","Note public vs private distinction in USA"]},
+{type:"Task 2",title:"Capital Punishment",prompt:"Some people believe that capital punishment (the death penalty) is a necessary and effective tool for reducing serious crime. Others believe it is morally wrong and should be abolished worldwide. Discuss both views and give your own opinion. Write at least 250 words.",chart:"",minWords:250,tips:["For: deterrence, justice for victims, removal of dangerous individuals","Against: wrongful execution, no proven deterrence, human rights","Note that many countries have abolished it","Give a clear opinion and justify it"]},
+{type:"Task 1",title:"Plastic Recycling Rates",prompt:"The bar chart below shows plastic recycling rates (%) in six countries in 2022. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words.",chart:"📊 Data: Germany=56%, South Korea=49%, Japan=44%, UK=32%, USA=9%, India=7%",minWords:150,tips:["Germany highest, India and USA lowest","Note the significant gap between Europe/Asia leaders and others","Speculate briefly on what might explain the differences","Use ranking language: the highest, the lowest, second"]},
+{type:"Task 2",title:"Sports Mega-Events",prompt:"International sporting events such as the Olympic Games and the FIFA World Cup require enormous financial investment from host countries. Many people believe this money could be better spent on other priorities. To what extent do you agree or disagree? Write at least 250 words.",chart:"",minWords:250,tips:["Consider economic benefits: tourism, infrastructure, prestige","Counter: cost overruns, white elephants, displacement of communities","Use concession language: while it is true that... nevertheless","Take a clear position — sitting on the fence loses marks"]},
+{type:"Task 2",title:"University: Academic vs Practical",prompt:"Some people believe that universities should focus on providing academic knowledge and developing critical thinking skills. Others argue that universities should primarily prepare students for employment by teaching practical skills. Discuss both views and give your own opinion. Write at least 250 words.",chart:"",minWords:250,tips:["Academic: broad thinking, research, adaptability, citizenship","Practical: employability, economic return, student debt justification","Consider that both can coexist within one curriculum","Clearly state which you favour and why"]}
+];
+
+// ══════════════════════════════════════
+// ALL 20 LISTENING EXERCISES (pre-written)
+// ══════════════════════════════════════
+const LISTENING = [
+{title:"Part 1 — Gym Membership Enquiry",subtitle:"A phone conversation between a customer and a gym receptionist",accent:"British English",
+text:`Receptionist: Good morning, FitZone Health Club. How can I help you?
+Customer: Hi, I'm calling to find out about joining the gym. Could you tell me about your membership options?
+Receptionist: Of course! We have three main options. The Standard membership is thirty-two pounds per month. That gives you access to all our gym equipment and group exercise classes.
+Customer: And what about the other options?
+Receptionist: The Premium membership is forty-five pounds a month and includes everything in Standard, plus access to our swimming pool, sauna, and one free personal training session per month.
+Customer: That sounds good. Is there a joining fee?
+Receptionist: Yes, there's a one-off joining fee of twenty-five pounds, but if you sign up before the end of this month, that's waived completely.
+Customer: Great. What are your opening hours?
+Receptionist: We're open Monday to Friday from six in the morning until ten at night. On weekends we open slightly later — eight am — and close at eight pm.
+Customer: Do you have parking on site?
+Receptionist: Yes, we have a car park with sixty spaces. The first two hours are free with gym validation, and it's two pounds per hour after that.
+Customer: Perfect. Could I come in for a tour before deciding?
+Receptionist: Absolutely. We offer free fifteen-minute tours every weekday at eleven am and four pm. You don't need to book — just come in and ask at reception.
+Customer: Wonderful. My name is Priya Sharma. I'll try to come in on Wednesday.
+Receptionist: We'll look forward to seeing you, Ms Sharma.`,
+questions:[
+{q:"What is the cost of Standard membership per month?",answer:"£32 / 32 pounds",type:"short"},
+{q:"What extra facility does Premium membership include that Standard does not?",answer:"swimming pool / sauna / personal training",type:"short"},
+{q:"How much is the joining fee normally?",answer:"£25 / 25 pounds",type:"short"},
+{q:"What time does the gym open on weekends?",answer:"8am / 8 o'clock",type:"short"},
+{q:"How long is the free parking period with gym validation?",answer:"2 hours / two hours",type:"short"},
+{q:"What is the customer's name?",answer:"Priya Sharma",type:"short"}
+]},
+{title:"Part 2 — Museum Audio Guide",subtitle:"An audio guide for visitors to a natural history museum",accent:"British English",
+text:`Welcome to the Wellcome Natural History Museum. My name is Jonathan, and I'll be your guide for today's highlights tour, which will take approximately ninety minutes.
+
+We're currently standing in the Grand Entrance Hall. Above you, you'll notice our famous blue whale skeleton, which measures twenty-five metres in length. This specimen was recovered from a beach in Scotland in 1938 and took three years to prepare for display. It has become the symbol of our museum and is reproduced on all our promotional materials.
+
+In a moment, we'll move to Gallery Three on your left, which houses our Earth Sciences collection. This gallery was completely renovated in 2019 at a cost of eight million pounds, and it now features interactive exhibits including a simulated earthquake experience, which is suitable for visitors aged seven and above.
+
+From Earth Sciences, we'll proceed to the fourth floor to see our collection of dinosaur fossils — the largest in Europe. The centrepiece is a complete Triceratops skeleton discovered in South Dakota in 1987. Alongside it, you'll find our recently acquired Spinosaurus skull, donated by a private collector last year.
+
+Refreshments are available in the Darwin Café on the ground floor, which is open from nine in the morning until five thirty in the afternoon. The museum shop, located near the main exit, stocks a wide range of books, gifts, and educational toys.
+
+Photography without flash is permitted throughout the museum. We kindly ask that you keep noise to a minimum in the fossil gallery, where our palaeontology team is currently working on a new specimen.`,
+questions:[
+{q:"How long does the highlights tour take?",answer:"90 minutes / ninety minutes",type:"short"},
+{q:"How long is the blue whale skeleton?",answer:"25 metres / twenty-five metres",type:"short"},
+{q:"What year was the Earth Sciences gallery renovated?",answer:"2019",type:"short"},
+{q:"How much did the renovation of Gallery Three cost?",answer:"£8 million / eight million pounds",type:"short"},
+{q:"Where was the Triceratops skeleton discovered?",answer:"South Dakota",type:"short"},
+{q:"Until what time is the Darwin Café open?",answer:"5:30pm / 17:30",type:"short"}
+]},
+{title:"Part 1 — Flat Rental Enquiry",subtitle:"A conversation between a prospective tenant and a letting agent",accent:"British English",
+text:`Agent: Good afternoon, Prestige Lettings. Sarah speaking.
+Caller: Hello, I'm calling about the two-bedroom flat advertised on your website. Is it still available?
+Agent: Yes, it is! It's a lovely property on Maple Street. The monthly rent is nine hundred and fifty pounds, excluding bills.
+Caller: And what bills would I need to pay separately?
+Agent: Gas, electricity, and internet. Council tax is included in the rent, which is quite unusual and really good value.
+Caller: That's great. Is there any outdoor space?
+Agent: Yes, there's a small south-facing garden at the rear. Very private — you can't see it from the street. There's also a storage shed.
+Caller: What floor is the flat on?
+Agent: It's on the ground floor. The property is in a Victorian conversion — so an older building, but it's been fully modernised inside. New kitchen, new bathroom, double glazing throughout.
+Caller: Is parking included?
+Agent: There's one allocated parking space included in the rent. It's on the street beside the building — secure and gated.
+Caller: What's the minimum tenancy length?
+Agent: We ask for a minimum of twelve months. We do require references from your employer and a previous landlord, plus a credit check. The deposit is equivalent to five weeks' rent.
+Caller: Could I arrange a viewing?
+Agent: Of course. The earliest slot I have is this Thursday at two fifteen in the afternoon. Would that suit you?
+Caller: Perfect. My name's Daniel Okonkwo.
+Agent: Lovely, Mr Okonkwo. I'll send you the address by email.`,
+questions:[
+{q:"What is the monthly rent for the flat?",answer:"£950 / 950 pounds",type:"short"},
+{q:"Which bill is included in the rent?",answer:"council tax",type:"short"},
+{q:"Which direction does the garden face?",answer:"south",type:"short"},
+{q:"What is the minimum tenancy length?",answer:"12 months / twelve months",type:"short"},
+{q:"How many weeks' rent is required as a deposit?",answer:"5 / five",type:"short"},
+{q:"What is the caller's name?",answer:"Daniel Okonkwo",type:"short"}
+]},
+{title:"Part 2 — City Heritage Walk",subtitle:"A guide introduces a historical walking tour",accent:"Australian English",
+text:`Good morning, everyone! Welcome to the Goldfields Heritage Walk. I'm your guide today, and I'm delighted to welcome you to what is genuinely one of Australia's most historically significant regions.
+
+Before we get started, a few practical matters. Our walk today covers exactly four kilometres and will take around two hours. There are some uneven cobblestone sections, particularly around the old market area, so please take care. Toilets are available here at the Visitor Centre at the start, and there are also facilities at the midway point — the Heritage Hotel — which we'll reach after approximately one hour.
+
+The Goldfields region boomed dramatically between 1851 and 1869, following the discovery of gold by a group of prospectors from Ireland and Victoria. At its peak, the population reached one hundred thousand — making this the largest settlement in Australia at the time, larger even than Melbourne.
+
+Our first stop will be the Old Courthouse, built in 1857 from local granite. It's a beautiful example of colonial civic architecture, and it now serves as a free community gallery and heritage museum. Opening hours are ten am to four pm daily.
+
+We'll then walk to the Miner's Memorial, unveiled in 1902, which lists the names of over eight hundred miners who died in accidents during the gold rush period. It's a sobering reminder of the human cost behind the region's prosperity.
+
+Finally, we'll visit the Buckland Mine, the last operational gold mine in the region, which closed in 1973 after one hundred and twenty-two years of continuous operation. The mine now offers guided underground tours at a cost of twelve dollars for adults and six dollars for children.`,
+questions:[
+{q:"How long is the Heritage Walk in kilometres?",answer:"4 / four",type:"short"},
+{q:"What is located at the midway point?",answer:"Heritage Hotel",type:"short"},
+{q:"What was the peak population of the Goldfields region?",answer:"100,000 / one hundred thousand",type:"short"},
+{q:"What material was the Old Courthouse built from?",answer:"granite",type:"short"},
+{q:"How many miners' names are listed on the Miner's Memorial?",answer:"over 800 / eight hundred",type:"short"},
+{q:"How much does an adult underground mine tour cost?",answer:"$12 / twelve dollars",type:"short"}
+]},
+{title:"Part 1 — Doctor's Appointment",subtitle:"A patient calls to book an appointment and receives health advice",accent:"British English",
+text:`Receptionist: Good morning, Parkview Medical Centre.
+Patient: Hello, I need to make an appointment with Dr Hassan, please. I've had a persistent cough for about three weeks and I'm a bit concerned.
+Receptionist: Of course. Dr Hassan's next available appointment is this Friday at ten forty-five in the morning. Would that work?
+Patient: Yes, that's fine.
+Receptionist: Great. Could I take your name and date of birth?
+Patient: It's Amara Diallo. Date of birth: fourteenth of March, nineteen eighty-nine.
+Receptionist: Perfect. And is this the same address — forty-two Birchwood Avenue?
+Patient: Yes, that's right.
+Receptionist: Wonderful. Now, in the meantime, if your cough gets significantly worse, especially if you develop a high fever above thirty-eight degrees, shortness of breath, or cough up any blood, please go straight to A and E rather than waiting for your appointment.
+Patient: I understand. Is there anything I can do before Friday?
+Receptionist: The doctor may ask you to keep a symptom diary — just note down when the cough is worst, whether it's dry or producing mucus, and anything that makes it better or worse. That will help Dr Hassan assess you more efficiently.
+Patient: That's helpful, thank you. One more thing — I'm on a course of antibiotics I was prescribed last month. Should I mention that?
+Receptionist: Absolutely, please bring a list of all your current medications. Also bring your medical insurance card if you have one, as we're now partnered with several private insurers.
+Patient: Will do. See you Friday.`,
+questions:[
+{q:"What time is the patient's appointment on Friday?",answer:"10:45 / ten forty-five",type:"short"},
+{q:"What is the patient's date of birth (year only)?",answer:"1989",type:"short"},
+{q:"What is the patient's address number?",answer:"42 / forty-two",type:"short"},
+{q:"At what temperature should the patient go to A&E?",answer:"38 degrees / 38°C",type:"short"},
+{q:"What should the patient keep before the appointment?",answer:"symptom diary",type:"short"},
+{q:"What should the patient bring to the appointment? (name one)",answer:"medications list / insurance card",type:"short"}
+]},
+{title:"Part 2 — Radio Travel Report",subtitle:"A travel journalist gives a radio report on sustainable tourism",accent:"British English",
+text:`Good evening and welcome to World Horizons on Radio Four. I'm Gemma Clarke, and tonight I'm reporting from Costa Rica, widely regarded as one of the world's leading destinations for sustainable tourism — or eco-tourism as it's commonly called.
+
+Costa Rica is a small country — about the size of Denmark — but it packs an extraordinary amount of biodiversity into its borders. It contains approximately 5% of the world's total species despite covering just 0.03% of the Earth's surface. Remarkably, over 25% of its land is designated as protected national parks and reserves.
+
+The country's commitment to environmental protection dates back to the 1970s, when the government began reversing decades of deforestation. Forest cover, which had fallen to just 21% by 1983, has now recovered to over 60% — one of the great conservation success stories of our time.
+
+Tourism has played a central role in this recovery. The country receives approximately three million visitors per year, and nature tourism is by far the most popular draw. Entry fees to national parks go directly to conservation funding — Tortuguero National Park alone generates over one million dollars in entry fees annually.
+
+However, challenges remain. Some popular destinations face overcrowding, and the construction of tourist infrastructure has damaged some of the habitats it was meant to celebrate. The government has introduced a certification scheme for sustainable tourism businesses, with hotels and tour operators rated on a scale of one to five leaves — the higher the rating, the more sustainably the business operates.
+
+If you're planning a visit, the dry season from December to April is generally considered the best time to travel, with reliable sunshine and good road conditions.`,
+questions:[
+{q:"What percentage of Costa Rica's land is protected national parks?",answer:"over 25% / 25 percent",type:"short"},
+{q:"What was Costa Rica's forest cover percentage in 1983?",answer:"21%",type:"short"},
+{q:"What is the forest cover percentage now?",answer:"over 60%",type:"short"},
+{q:"Approximately how many visitors does Costa Rica receive per year?",answer:"3 million / three million",type:"short"},
+{q:"How much does Tortuguero National Park generate in entry fees annually?",answer:"over $1 million / one million dollars",type:"short"},
+{q:"What is the best time to visit Costa Rica according to the report?",answer:"December to April / dry season",type:"short"}
+]},
+{title:"Part 1 — University Accommodation Office",subtitle:"A student enquires about university housing options",accent:"British English",
+text:`Officer: Accommodation Office, how can I help?
+Student: Hi, I'm a first-year student and I'm interested in finding out about university accommodation for next year.
+Officer: Of course. We have several options for returning students. Our most popular is Elmwood Hall — it's a self-catered residence about a ten-minute walk from the main campus. Single en-suite rooms are four hundred and sixty pounds per month.
+Student: Is there a catered option?
+Officer: Yes, Greenfield House offers full board — three meals a day included — for five hundred and eighty pounds per month. It's on campus, so very convenient. However, I should mention that Greenfield is usually very competitive — most rooms are allocated by ballot in February.
+Student: I see. What about private houses?
+Officer: We manage a list of approved private landlords — the properties have all been inspected and meet our safety standards. Typical rent for a room in a shared house is around three hundred and fifty to four hundred pounds per month, excluding bills.
+Student: Can I apply online?
+Officer: Yes, all applications go through the university housing portal. The deadline for next academic year is the thirty-first of March. Late applications are considered if spaces remain, but there's no guarantee.
+Student: Do I need a guarantor?
+Officer: For university-managed accommodation, no. For private rentals, landlords typically require a UK-based guarantor or a six-month rent payment in advance if you're an international student.
+Student: That's very helpful. My name is Yemi Adebayo — could I receive this information by email?
+Officer: Certainly. I'll send a full information pack to your university email address.`,
+questions:[
+{q:"How far is Elmwood Hall from the main campus?",answer:"10 minutes / ten-minute walk",type:"short"},
+{q:"What is the monthly rent for a single en-suite room at Elmwood Hall?",answer:"£460 / 460 pounds",type:"short"},
+{q:"How are rooms at Greenfield House allocated?",answer:"by ballot",type:"short"},
+{q:"What is the application deadline for next academic year?",answer:"31st March / March 31",type:"short"},
+{q:"What do international students typically need to provide instead of a guarantor for private rentals?",answer:"6 months rent in advance / six months' rent",type:"short"},
+{q:"What is the student's name?",answer:"Yemi Adebayo",type:"short"}
+]},
+{title:"Part 2 — Wildlife Documentary Narration",subtitle:"A nature documentary about the Arctic ecosystem",accent:"British English",
+text:`The Arctic. A world of extremes. For most of the year, this vast wilderness sits beneath temperatures that plunge to minus forty degrees Celsius, cloaked in perpetual darkness. Yet for a brief, spectacular window in summer, the Arctic bursts into life in ways that few other ecosystems can match.
+
+The polar bear — Ursus maritimus — is the Arctic's apex predator and the animal most closely associated with this region. Adult males typically weigh between four hundred and six hundred kilograms, making them the world's largest land carnivore. Their white fur, which is actually transparent and hollow, traps heat and provides camouflage against the snow and ice.
+
+Sea ice is central to the polar bear's survival. Bears rely on it as a platform from which to hunt their primary prey — ringed seals — waiting motionless at breathing holes for hours, sometimes days. As climate change has caused Arctic sea ice to thin and retreat, polar bears must swim further between ice floes, expending critical energy reserves. Since 1979, the Arctic has lost approximately 13% of its sea ice per decade.
+
+The Arctic also hosts one of the world's great migration spectacles. Each spring, caribou herds numbering in the hundreds of thousands travel north across the tundra to calving grounds, followed by wolves, bears, and golden eagles. The calving period is brief — calves must be strong enough to travel within hours of birth.
+
+Perhaps the most dramatic symbol of Arctic change is the permafrost — the layer of permanently frozen ground beneath the tundra. As temperatures rise, permafrost is thawing and releasing methane — a greenhouse gas many times more potent than CO2 — creating a potentially catastrophic feedback loop.`,
+questions:[
+{q:"What is the minimum temperature in the Arctic in winter?",answer:"minus 40 degrees Celsius / -40°C",type:"short"},
+{q:"What is the weight range of adult male polar bears?",answer:"400 to 600 kg / kilograms",type:"short"},
+{q:"What is the polar bear's primary prey?",answer:"ringed seals",type:"short"},
+{q:"What percentage of Arctic sea ice has been lost per decade since 1979?",answer:"13%",type:"short"},
+{q:"How quickly must caribou calves be able to travel after birth?",answer:"within hours",type:"short"},
+{q:"What greenhouse gas does thawing permafrost release?",answer:"methane",type:"short"}
+]},
+{title:"Part 1 — Travel Agency Booking",subtitle:"A customer books a holiday package with a travel agent",accent:"British English",
+text:`Agent: Sunrise Holidays, this is Karen speaking.
+Customer: Hello. I'm looking to book a two-week holiday in the summer for two adults and one child aged nine.
+Agent: Lovely! Where were you thinking of travelling to?
+Customer: We're considering either Mallorca or the Algarve. What would you recommend?
+Agent: Both are fantastic choices. Mallorca tends to be better for families with young children because of the calmer beaches on the west coast, whereas the Algarve is stunning but some of the clifftop beaches can be tricky with young children. I'd lean towards Mallorca.
+Customer: Mallorca it is, then. What packages do you have?
+Agent: Our most popular is the Cala d'Or resort package — fourteen nights, departing the twentieth of July from Manchester. It includes return flights, transfers, and a half-board hotel. The total for two adults and one child would be three thousand four hundred and eighty pounds.
+Customer: Does the child fly at the same price as an adult?
+Agent: No — children aged two to eleven receive a twenty percent discount on the full package price.
+Customer: That sounds reasonable. Is travel insurance included?
+Agent: It's not included but we strongly recommend our Gold Cover insurance. For your group, it would be an additional ninety-six pounds for the two weeks.
+Customer: What does that cover?
+Agent: Medical expenses up to ten million pounds, cancellation, luggage up to three thousand pounds, and travel delay. It's comprehensive cover.
+Customer: I'll think about it. Can I put the flights on hold?
+Agent: I can hold the seats for forty-eight hours without any payment. After that, full payment is required to confirm.`,
+questions:[
+{q:"How old is the child travelling?",answer:"9 / nine",type:"short"},
+{q:"Which destination does the agent recommend?",answer:"Mallorca",type:"short"},
+{q:"What date does the holiday depart?",answer:"20th July / July 20",type:"short"},
+{q:"What discount do children aged 2-11 receive?",answer:"20% / twenty percent",type:"short"},
+{q:"How much does the Gold Cover travel insurance cost?",answer:"£96 / 96 pounds",type:"short"},
+{q:"For how long can the seats be held without payment?",answer:"48 hours / forty-eight hours",type:"short"}
+]},
+{title:"Part 2 — School Career Talk",subtitle:"A careers advisor speaks to secondary school students",accent:"British English",
+text:`Good afternoon, everyone. I'm Ms Patterson from the Careers and Guidance Department, and today I want to talk to you about something that I know many of you have on your minds — choosing what to do after Year Eleven.
+
+You'll be making decisions about sixth form, college, or apprenticeships, and it's important to make those decisions with accurate information rather than guesswork.
+
+Let's start with A-levels. If you choose to stay in sixth form and complete A-levels, you'll typically study three or four subjects over two years. A-levels are widely recognised by universities and provide the academic preparation for degree-level study. The average student takes three years to complete an undergraduate degree, with some four-year options available, particularly for engineering, medicine, or languages degrees with a year abroad.
+
+Apprenticeships are a brilliant alternative that I don't think gets enough attention. You work for a company, earn a salary — the minimum is six pounds forty per hour for apprentices — and gain a recognised qualification at the same time. Higher and Degree apprenticeships, which have grown significantly in the past five years, now allow apprentices to earn the equivalent of a bachelor's or even master's degree without paying tuition fees.
+
+I also want to mention the new T-Level qualifications, introduced in 2020. These are two-year technical qualifications equivalent to three A-levels, and they include a substantial forty-five day industry placement, giving you real work experience.
+
+Finally, whatever route you choose, I'd encourage you to attend our three upcoming careers fairs — in November, February, and May — where you can speak directly to employers, universities, and apprenticeship providers.`,
+questions:[
+{q:"How many subjects do A-level students typically study?",answer:"3 or 4 / three or four",type:"short"},
+{q:"What is the minimum hourly wage for apprentices?",answer:"£6.40 / 6 pounds 40",type:"short"},
+{q:"When were T-Level qualifications introduced?",answer:"2020",type:"short"},
+{q:"How many days of industry placement do T-Levels include?",answer:"45 / forty-five",type:"short"},
+{q:"How many careers fairs are mentioned?",answer:"3 / three",type:"short"},
+{q:"When is the first careers fair?",answer:"November",type:"short"}
+]},
+{title:"Part 1 — Library Registration",subtitle:"A new student registers at a university library",accent:"British English",
+text:`Librarian: Good morning, welcome to Riverside University Library. How can I help?
+Student: Hi, I'd like to register as a new member. I've just started my postgraduate programme.
+Librarian: Wonderful. I'll need a few details. Your full name first, please.
+Student: Sofia Navarro. S-O-F-I-A, Navarro, N-A-V-A-R-R-O.
+Librarian: And your student number?
+Student: RU-8-8-3-4-7.
+Librarian: Perfect. Which department are you in?
+Student: Biomedical Sciences. I'm doing a Master's in Neuroscience.
+Librarian: Excellent. As a postgraduate student, you can borrow up to twenty books at a time, with a six-week loan period. You can renew online up to three times unless another student has reserved the item.
+Student: What about academic journals?
+Librarian: Full digital access to over ninety thousand journals and databases is available through our online portal. You'll use your student ID and a password you'll set yourself on first login.
+Student: Is there printing available?
+Librarian: Yes. Each student receives a credit of ten pounds per term on their print account. Black and white printing is four pence per page; colour is twenty pence. Additional credit can be purchased at the library desk.
+Student: Great. And what are the opening hours?
+Librarian: Monday to Thursday we're open eight am until midnight. Friday eight to ten pm. Saturday and Sunday ten am until eight pm. During exam periods we extend to twenty-four hours — we'll email you in advance.
+Student: Brilliant. Can I get my card today?
+Librarian: Absolutely — I just need your university ID, and I can print your card right now.`,
+questions:[
+{q:"What is the student's full name?",answer:"Sofia Navarro",type:"short"},
+{q:"What is the student's course?",answer:"Neuroscience / Master's in Neuroscience",type:"short"},
+{q:"How many books can postgraduate students borrow at once?",answer:"20 / twenty",type:"short"},
+{q:"How much printing credit does each student receive per term?",answer:"£10 / ten pounds",type:"short"},
+{q:"How much does colour printing cost per page?",answer:"20p / 20 pence",type:"short"},
+{q:"Until what time is the library open on Fridays?",answer:"10pm / 22:00",type:"short"}
+]},
+{title:"Part 2 — Cooking Class Introduction",subtitle:"A chef introduces a professional cooking class",accent:"Australian English",
+text:`Welcome, everyone, to Flavours of the World Cooking Studio. My name is Chef Marco, and I'll be leading tonight's class on Italian regional cuisine.
+
+First, a few housekeeping points. Aprons are hanging near the entrance — please put one on before we begin. Long hair must be tied back, and I ask everyone to wash their hands thoroughly at the sinks along the back wall before touching any food.
+
+Tonight we'll be making three dishes. We'll start with a classic Venetian risotto — using arborio rice, white wine, and saffron. Then we'll prepare a Sicilian caponata — a sweet and sour aubergine stew that works beautifully as a starter or side dish. And finally, we'll make tiramisu for dessert — no cooking required, just assembly, so even the less confident among you will shine.
+
+The class runs for two and a half hours. We'll spend the first hour on the risotto, which requires constant attention and is the most technique-intensive part of the evening. The caponata will cook largely by itself during this time — I'll get it started first.
+
+All ingredients have been sourced locally where possible. The parmesan comes from a specialist Italian importer — it's a twenty-four month aged variety, significantly more flavourful than what you'd typically find in a supermarket. The saffron is from Iran, which produces the finest quality in the world.
+
+At the end of the class, you'll sit down together to eat everything you've made, paired with a glass of Prosecco. You'll also receive printed recipe cards for all three dishes to take home. Any questions before we begin?`,
+questions:[
+{q:"What is the chef's name?",answer:"Chef Marco / Marco",type:"short"},
+{q:"What type of rice is used for the risotto?",answer:"arborio",type:"short"},
+{q:"How long does the class run?",answer:"2.5 hours / two and a half hours",type:"short"},
+{q:"Which dish requires no cooking?",answer:"tiramisu",type:"short"},
+{q:"How old is the aged parmesan?",answer:"24 months / twenty-four months",type:"short"},
+{q:"What drink is served at the end of the class?",answer:"Prosecco",type:"short"}
+]},
+{title:"Part 1 — Job Interview Preparation",subtitle:"A careers coach prepares a client for a job interview",accent:"British English",
+text:`Coach: Right, let's get started. You've got your interview at Sterling & Partners on Thursday at two o'clock, so we have three days to prepare properly.
+Client: I'm quite nervous. I haven't had a formal interview in about six years.
+Coach: That's completely understandable, but nervousness is actually useful — it shows you care. The key is channelling it. First, let me ask: have you researched the company?
+Client: I've looked at their website and read their last annual report. They reported revenue of two hundred and forty million pounds last year and they're planning to expand into three new markets.
+Coach: Excellent. That kind of specific knowledge impresses interviewers. Now, most interviews at this level will follow a competency-based format. They'll say something like: 'Tell me about a time when you dealt with a difficult colleague.' You need to use the STAR method.
+Client: What's that?
+Coach: Situation, Task, Action, Result. Describe the situation briefly, explain what your task was, describe specifically what YOU did, and then — crucially — tell them the positive result. Interviewers want to hear outcomes.
+Client: That makes sense. What should I wear?
+Coach: For a law firm of this calibre, dress conservatively — dark navy or charcoal suit, white or light blue shirt. No strong perfume or cologne. Make sure your shoes are polished.
+Client: Should I bring anything?
+Coach: Bring three printed copies of your CV, a notepad and pen, and your portfolio if you have one. Arrive ten minutes early — not thirty, not five. Ten.
+Client: What if I don't know the answer to something?
+Coach: Say: 'That's a great question — let me think about that for a moment.' Then think. Silence is absolutely fine. Never make something up.`,
+questions:[
+{q:"What day and time is the interview?",answer:"Thursday at 2pm / two o'clock",type:"short"},
+{q:"What was the company's revenue last year?",answer:"£240 million / two hundred and forty million",type:"short"},
+{q:"What does STAR stand for? (give first word only)",answer:"Situation",type:"short"},
+{q:"What colour suit does the coach recommend?",answer:"dark navy or charcoal",type:"short"},
+{q:"How many copies of the CV should the client bring?",answer:"3 / three",type:"short"},
+{q:"How many minutes early should the client arrive?",answer:"10 / ten",type:"short"}
+]},
+{title:"Part 2 — Environmental Talk",subtitle:"A school environmental officer talks to students about recycling",accent:"British English",
+text:`Good morning, Year Ten. My name is Mr Griffiths, and I'm the Environmental Sustainability Officer for the council. Today I'm going to talk to you about something that affects every one of you directly: waste and recycling.
+
+Let me start with some numbers. Our borough produced forty-seven thousand tonnes of household waste last year. Of that, we recycled thirty-one percent — which is actually three percent above the national average, so give yourselves a small round of applause. However, the government has set a target of sixty-five percent recycling by 2035, which means we have significant progress still to make.
+
+The most common contamination problem we face — and contamination is when non-recyclable items are placed in recycling bins — is food waste on packaging. A pizza box covered in grease cannot be recycled. Neither can yoghurt pots that haven't been rinsed. One contaminated item can ruin an entire bin bag of otherwise recyclable material.
+
+Glass is one of the most efficiently recycled materials we have. A glass bottle can be recycled and back on a supermarket shelf as a new bottle in as little as thirty days. By contrast, the average plastic bottle takes around four hundred and fifty years to decompose in landfill.
+
+I'm here today because we're launching a new initiative in local schools — the Green Schools Programme. Each participating school will receive a set of clearly labelled sorting bins, and students who correctly sort waste will earn points for their school. The school with the most points at the end of term will win five hundred pounds for the school fund.
+
+Sign-up sheets are available from your form tutors from tomorrow.`,
+questions:[
+{q:"How much household waste did the borough produce last year?",answer:"47,000 tonnes / forty-seven thousand tonnes",type:"short"},
+{q:"What percentage did the borough recycle?",answer:"31%",type:"short"},
+{q:"What is the government's recycling target by 2035?",answer:"65% / sixty-five percent",type:"short"},
+{q:"How quickly can a glass bottle be recycled and back on shelves?",answer:"30 days / thirty days",type:"short"},
+{q:"How long does a plastic bottle take to decompose in landfill?",answer:"450 years / four hundred and fifty years",type:"short"},
+{q:"What is the prize for the school with the most recycling points?",answer:"£500 / five hundred pounds",type:"short"}
+]},
+{title:"Part 1 — Sports Centre Booking",subtitle:"A customer calls to book a squash court",accent:"British English",
+text:`Receptionist: Northfield Sports Centre, good afternoon.
+Caller: Hi, I'd like to book a squash court for this weekend, please. Are you open on Sunday?
+Receptionist: We are, yes. On Sundays we're open from eight in the morning until six in the evening. Court bookings are available in one-hour slots.
+Caller: Great. Is Court 1 available at eleven am?
+Receptionist: Let me check. Court 1 at eleven... yes, that's available. Court 1 is our newest court — it has electronic scoring displays. Court hire on Sundays is nine pounds per person per hour, or sixteen pounds for two people.
+Caller: There will be two of us. Do we need to bring our own equipment?
+Receptionist: Rackets are available for hire at two pounds each. Squash balls are one pound fifty per ball — we recommend the yellow dot ball for intermediate players.
+Caller: We're both reasonably experienced, so yellow dot should be fine.
+Receptionist: Perfect. I'll also mention that we have a sports café on the ground floor that does excellent post-match snacks and fresh smoothies. It closes at seven on Sundays.
+Caller: Brilliant. Can I pay now or on the day?
+Receptionist: We require a card payment to confirm the booking. There's a fifty percent cancellation fee if you cancel within twenty-four hours of your session.
+Caller: Understood. My name is Tomás Vega, and I'll pay by card now.
+Receptionist: Excellent. Card number when you're ready, Mr Vega.`,
+questions:[
+{q:"Until what time is the sports centre open on Sundays?",answer:"6pm / 18:00",type:"short"},
+{q:"How much is court hire for two people on Sundays?",answer:"£16 / sixteen pounds",type:"short"},
+{q:"How much does racket hire cost per racket?",answer:"£2 / two pounds",type:"short"},
+{q:"What type of squash ball is recommended for intermediate players?",answer:"yellow dot",type:"short"},
+{q:"What is the cancellation fee if cancelled within 24 hours?",answer:"50% / fifty percent",type:"short"},
+{q:"What is the customer's name?",answer:"Tomás Vega",type:"short"}
+]},
+{title:"Part 2 — Property Development Talk",subtitle:"An architect presents plans for a new community development",accent:"British English",
+text:`Good evening, residents. Thank you for attending this consultation. I'm Dr Anita Patel, lead architect for the Riverside Quarter development, and tonight I'd like to walk you through our updated plans.
+
+As many of you know, the former Riverside Gasworks site — thirty-two hectares of brownfield land — has been cleared following environmental remediation that took eighteen months to complete. We're now ready to move forward with an ambitious, mixed-use development.
+
+The development will include eight hundred new homes — sixty percent of which will be available for private sale, with the remaining forty percent designated as affordable housing, in line with council requirements. We've designed a mix of apartment buildings and terraced houses, all meeting the highest energy efficiency standards, with solar panels fitted as standard.
+
+At the heart of the site will be a new public park of approximately three hectares, with a children's play area, community allotments, and a café kiosk. The park will be publicly accessible at all times — not a gated amenity for residents only.
+
+We're also proposing a new primary school with capacity for four hundred and fifty pupils, a medical centre serving the wider community, and ground-floor retail spaces facing onto the main boulevard.
+
+Construction is planned to begin in spring of next year, with the first homes ready for occupation eighteen months later. The entire development is expected to be complete within seven years.
+
+This evening, we'd particularly like your feedback on the proposed road layout, which includes a new pedestrian bridge over the river. Consultation forms are on the table at the back, and our team will be available for questions afterwards.`,
+questions:[
+{q:"How large is the former Gasworks site in hectares?",answer:"32 / thirty-two",type:"short"},
+{q:"What percentage of homes will be affordable housing?",answer:"40%",type:"short"},
+{q:"How large will the new public park be?",answer:"3 hectares / three hectares",type:"short"},
+{q:"What will the new primary school's capacity be?",answer:"450 pupils / four hundred and fifty",type:"short"},
+{q:"When is construction planned to begin?",answer:"spring next year",type:"short"},
+{q:"How many years will the entire development take?",answer:"7 / seven",type:"short"}
+]},
+{title:"Part 1 — Train Journey Enquiry",subtitle:"A traveller calls National Rail enquiries",accent:"British English",
+text:`Operator: National Rail enquiries, good morning.
+Caller: Good morning. I need to travel from Edinburgh to London King's Cross next Saturday. What are my options?
+Operator: Of course. The fastest direct service is the LNER Azuma — that takes approximately four hours and twenty minutes. The first departure on Saturdays is six fifteen in the morning. There are then departures roughly every hour throughout the day.
+Caller: What's the cheapest ticket I can get?
+Operator: If you book in advance for a specific train, the cheapest Standard class is thirty-two pounds fifty each way. If you want flexibility to take any train, an Off-Peak Anytime ticket is around ninety-five pounds each way.
+Caller: I'd rather have flexibility. Is there a First Class option?
+Operator: First Class on LNER includes complimentary meals and drinks, a wider seat, and a power socket. A First Class Anytime ticket is one hundred and seventy-five pounds each way.
+Caller: Does it include the meal even on early morning trains?
+Operator: Complimentary breakfast is served on trains departing Edinburgh between six and ten in the morning. After that, light refreshments are provided throughout the day.
+Caller: Good to know. Is Edinburgh Waverley easy to get to from the city centre?
+Operator: It's right in the heart of the city — about a five-minute walk from Princes Street. There's also a tram stop directly outside and a taxi rank at the main entrance on the north side of the station.
+Caller: Brilliant. One last question — can I take a bicycle?
+Operator: Bicycles are carried free of charge, but you must reserve a space in advance as there are only six bike spaces per train.`,
+questions:[
+{q:"How long does the fastest direct service from Edinburgh to London take?",answer:"4 hours 20 minutes / four hours twenty minutes",type:"short"},
+{q:"What is the cheapest advance Standard class ticket price each way?",answer:"£32.50 / thirty-two pounds fifty",type:"short"},
+{q:"How much is a First Class Anytime ticket each way?",answer:"£175 / one hundred and seventy-five pounds",type:"short"},
+{q:"Until what time is complimentary breakfast served?",answer:"10am / ten in the morning",type:"short"},
+{q:"How many bike spaces are there per train?",answer:"6 / six",type:"short"},
+{q:"Where is the taxi rank at Edinburgh Waverley?",answer:"north side / main entrance",type:"short"}
+]},
+{title:"Part 2 — Science Museum Exhibit",subtitle:"A curator introduces a new space exploration exhibit",accent:"British English",
+text:`Good afternoon and welcome to Cosmos: The Space Exploration Experience — our newest and most ambitious permanent exhibit here at the National Science Museum.
+
+I'm Dr Claire Marsh, Chief Curator, and I've had the privilege of developing this exhibit over the past three years alongside a team of fifty specialists, including astronomers, engineers, and education experts.
+
+Cosmos occupies the entire east wing of the museum — that's approximately four thousand square metres of gallery space — making it our largest ever exhibit. It traces the history of space exploration from the launch of Sputnik by the Soviet Union in October 1957 through to the current Mars missions and the plans for crewed lunar return.
+
+One of our centrepiece installations is a full-scale model of the International Space Station's Columbus module — the European laboratory module, which was launched in 2008. You can step inside, see how astronauts live and conduct experiments in microgravity, and speak to a virtual astronaut powered by artificial intelligence who will answer your questions in real time.
+
+We've also partnered with six national space agencies — including NASA, ESA, JAXA, and the UK Space Agency — who have loaned us artifacts that have actually been to space. These include a spacesuit worn during a 1995 Shuttle mission, meteorite samples from the Moon and Mars, and the communications module from a 1970s Lunar Orbiter.
+
+Admission to Cosmos is included in the standard museum entry. We strongly recommend booking a timed entry slot online, particularly on weekends, as capacity is limited to three hundred visitors per session.`,
+questions:[
+{q:"How long did it take to develop the Cosmos exhibit?",answer:"3 years / three years",type:"short"},
+{q:"How large is the exhibit in square metres?",answer:"4,000 / four thousand",type:"short"},
+{q:"What year was Sputnik launched?",answer:"1957",type:"short"},
+{q:"When was the Columbus module launched?",answer:"2008",type:"short"},
+{q:"How many national space agencies partnered with the museum?",answer:"6 / six",type:"short"},
+{q:"How many visitors are allowed per session?",answer:"300 / three hundred",type:"short"}
+]},
+{title:"Part 1 — Language Course Enquiry",subtitle:"A student enquires about an English language course abroad",accent:"British English",
+text:`School Rep: Good afternoon, Cambridge English Academy. How may I help?
+Caller: Hello. I'm interested in an intensive English course. I'm planning to take IELTS in six months and I need to improve significantly.
+School Rep: Wonderful — you've come to the right place. We specialise in IELTS preparation. Our most popular programme is the twelve-week Intensive IELTS course. Classes run Monday to Friday, four hours in the morning from nine until one, and then optional practice sessions in the afternoon from two to four.
+Caller: What's the class size?
+School Rep: We cap classes at eight students maximum — usually from four to six different countries, which gives you great practice with different accents.
+Caller: That sounds excellent. What's the cost?
+School Rep: The twelve-week course is two thousand eight hundred pounds, which includes all course materials, mock exams, and your IELTS registration fee. We also offer a six-week version for one thousand six hundred pounds.
+Caller: Is accommodation available?
+School Rep: Yes. We have two options: homestay with a local family — breakfast and dinner included — at nine hundred and fifty pounds per month, or student residence — self-catered — at seven hundred and eighty pounds per month.
+Caller: When does the next intake start?
+School Rep: Our next cohort starts on the third of March. After that, we have intakes on the first Monday of each month.
+Caller: What band score do most students achieve?
+School Rep: Students on our twelve-week course achieve an average improvement of one full band, and seventy percent achieve their target band score.
+Caller: Excellent. Could you send me the enrolment pack?`,
+questions:[
+{q:"How long are morning classes each day?",answer:"4 hours",type:"short"},
+{q:"What is the maximum class size?",answer:"8 / eight",type:"short"},
+{q:"How much does the twelve-week course cost?",answer:"£2,800 / two thousand eight hundred pounds",type:"short"},
+{q:"How much does homestay accommodation cost per month?",answer:"£950 / nine hundred and fifty pounds",type:"short"},
+{q:"When does the next intake start?",answer:"3rd March / March 3",type:"short"},
+{q:"What percentage of students achieve their target band score?",answer:"70% / seventy percent",type:"short"}
+]}
+];
+
+// ══════════════════════════════════════
+// STATE
+// ══════════════════════════════════════
+const TODAY = new Date().toLocaleDateString('en-GB',{weekday:'long',day:'numeric',month:'long',year:'numeric'});
+document.getElementById('dpill').textContent = TODAY;
+
+let state = {r:{done:[]},w:{done:[]},l:{done:[]}};
+let curSec = 'home';
+let curEx = {r:null,w:null,l:null};
+let rSel = {};
+let ttsPlay = false, ttsUtt = null, ttsTxt = '';
+let progIv;
+
+function save(){try{localStorage.setItem('krupa_state',JSON.stringify(state));}catch(e){}}
+function load(){try{const d=localStorage.getItem('krupa_state');if(d)state=JSON.parse(d);}catch(e){}}
+load();
+
+// ══════════════════════════════════════
+// NAV
+// ══════════════════════════════════════
+function showSec(s){
+  curSec=s;
+  stopTTS();
+  [0,1,2,3].forEach(i=>document.getElementById('nt'+i).classList.remove('active'));
+  const map={home:0,reading:1,writing:2,listening:3};
+  document.getElementById('nt'+map[s]).classList.add('active');
+  if(s==='home') renderHome();
+  else if(s==='reading') renderSection('r');
+  else if(s==='writing') renderSection('w');
+  else if(s==='listening') renderSection('l');
+  updateBadges();
+}
+function goHome(){showSec('home');}
+function updateBadges(){
+  document.getElementById('rb').textContent=state.r.done.length+'/20';
+  document.getElementById('wb').textContent=state.w.done.length+'/20';
+  document.getElementById('lb').textContent=state.l.done.length+'/20';
+}
+
+// ══════════════════════════════════════
+// HOME
+// ══════════════════════════════════════
+function renderHome(){
+  const secs=[
+    {k:'r',name:'Reading',sec:'reading',icon:'📖',ac:'var(--reading)',desc:'20 full academic passages with True/False, MCQ and short-answer questions.'},
+    {k:'w',name:'Writing',sec:'writing',icon:'✍️',ac:'var(--amber)',desc:'20 Task 1 & Task 2 prompts — type your response and get instant band score feedback.'},
+    {k:'l',name:'Listening',sec:'listening',icon:'🎧',ac:'var(--listening)',desc:'20 audio exercises read aloud by text-to-speech. Answer without reading the transcript.'}
+  ];
+  const total=state.r.done.length+state.w.done.length+state.l.done.length;
+  document.getElementById('main').innerHTML=`
+  <div class="hero">
+    <h1>KRUPA <span>IELTS PREP</span></h1>
+    <p>20 ready-to-use exercises per section, every day. No loading, no errors — just practise.</p>
+    <div style="margin-top:18px;display:inline-flex;align-items:center;gap:10px;background:var(--surface);border:1px solid var(--border);border-radius:28px;padding:9px 20px;">
+      <span style="font-size:0.72rem;color:var(--muted);letter-spacing:1px;text-transform:uppercase;">Today's Total</span>
+      <span style="font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:700;color:var(--teal);">${total}/60</span>
+    </div>
+  </div>
+  <div class="sgrid">${secs.map(s=>{
+    const d=state[s.k].done.length;
+    const pct=Math.round(d/20*100);
+    return `<div class="scard" style="--ac:${s.ac}" onclick="showSec('${s.sec}')">
+      <div class="si">${s.icon}</div>
+      <h3>${s.name}</h3>
+      <p>${s.desc}</p>
+      <div class="pbar-wrap">
+        <div class="pbar-num">${d}<span style="color:var(--muted);font-size:1rem">/20</span></div>
+        <div class="pbar-lbl">Today's Progress</div>
+        <div class="pbar-thin"><div class="pbar-fill" style="width:${pct}%;background:${s.ac}"></div></div>
+      </div>
+    </div>`;
+  }).join('')}</div>`;
+}
+
+// ══════════════════════════════════════
+// SECTION VIEW
+// ══════════════════════════════════════
+function renderSection(k){
+  const info={r:{name:'Reading',icon:'📖',ac:'var(--reading)',data:READING,desc:'Click any exercise number to open that passage and questions.'},
+              w:{name:'Writing',icon:'✍️',ac:'var(--amber)',data:WRITING,desc:'Click any exercise for a writing prompt — type your response for band score feedback.'},
+              l:{name:'Listening',icon:'🎧',ac:'var(--listening)',data:LISTENING,desc:'Click any exercise — press Play to hear it read aloud, then answer without looking at the transcript.'}};
+  const {name,icon,ac,data,desc}=info[k];
+  const done=state[k].done;
+  const activeIdx=curEx[k];
+
+  const grid=Array.from({length:20},(_,i)=>{
+    const isDone=done.includes(i);
+    const isA=activeIdx===i;
+    return `<div class="ecard ${isDone?'done':''} ${isA?'acard':''}" style="--ac:${ac}" onclick="openEx('${k}',${i})">
+      <div class="en" style="${isA?'color:var(--teal)':''}">${i+1}</div>
+      <div class="es">${isDone?'Done':isA?'Open':'Start'}</div>
+    </div>`;
+  }).join('');
+
+  let panel='';
+  if(activeIdx!==null){
+    if(k==='r') panel=renderReadPanel(activeIdx);
+    else if(k==='w') panel=renderWritePanel(activeIdx);
+    else if(k==='l') panel=renderListenPanel(activeIdx);
+  }
+
+  const secId={r:'reading',w:'writing',l:'listening'}[k];
+  document.getElementById('main').innerHTML=`
+  <div class="sec-hdr">
+    <div><h2>${icon} ${name} — 20 Exercises</h2><p>${desc}</p></div>
+    <div class="tp-box"><div class="tp-big">${done.length}/20</div><div class="tp-lbl">Done Today</div></div>
+  </div>
+  <div class="egrid" style="--ac:${ac}">${grid}</div>
+  <div id="panel">${panel}</div>`;
+}
+
+function openEx(k,i){
+  curEx[k]=i;
+  rSel[i]={};
+  renderSection(k);
+}
+
+// ══════════════════════════════════════
+// READING PANEL
+// ══════════════════════════════════════
+function renderReadPanel(i){
+  const ex=READING[i];
+  const qHtml=ex.questions.map((q,qi)=>{
+    if(q.type==='tfng'||q.type==='mcq'){
+      return `<div class="qb"><div class="ql"><span class="qn" style="background:var(--reading)">${qi+1}</span>${q.q}</div>
+        <div class="opts">${q.options.map(o=>`<div class="opt" data-v="${o}" onclick="selRO(${i},${qi},this)">${o}</div>`).join('')}</div></div>`;
+    } else {
+      return `<div class="qb"><div class="ql"><span class="qn" style="background:var(--reading)">${qi+1}</span>${q.q}</div>
+        <input class="ainp" id="rsa_${i}_${qi}" type="text" placeholder="Your answer…"/></div>`;
+    }
+  }).join('');
+  return `<div class="epanel">
+    <div class="ptop"><h3>Exercise ${i+1} — ${ex.title}</h3><span class="tag tag-r">Academic Reading</span></div>
+    <div class="passage">${ex.text.replace(/\n\n/g,'</p><p>').replace(/^/,'<p>').replace(/$/,'</p>')}</div>
+    ${qHtml}
+    <div class="brow">
+      <button class="btn btn-t" onclick="checkRead(${i})">Check Answers</button>
+      <button class="btn btn-g" onclick="openEx('r',${i})">Reset</button>
+    </div>
+    <div id="rres"></div>
+  </div>`;
+}
+
+function selRO(ei,qi,el){
+  if(!rSel[ei]) rSel[ei]={};
+  rSel[ei][qi]=el.dataset.v;
+  el.closest('.opts').querySelectorAll('.opt').forEach(o=>o.classList.remove('sel'));
+  el.classList.add('sel');
+}
+
+function checkRead(i){
+  const ex=READING[i];
+  let correct=0;
+  ex.questions.forEach((q,qi)=>{
+    const sel=(rSel[i]||{})[qi];
+    const inp=document.getElementById(`rsa_${i}_${qi}`);
+    const user=(sel||(inp?inp.value.toLowerCase().trim():'')).toLowerCase().trim();
+    const ans=q.answer.toLowerCase().trim();
+    const ok=user===ans||ans.split('/').map(a=>a.trim()).some(a=>user===a)||(user.length>2&&ans.includes(user));
+    if(q.type==='tfng'||q.type==='mcq'){
+      const opts=document.querySelectorAll(`#panel .qb:nth-child(${qi+1}) .opt`);
+      opts.forEach(o=>{
+        if(o.dataset.v===q.answer) o.classList.add('correct');
+        if(o.classList.contains('sel')&&o.dataset.v!==q.answer) o.classList.add('wrong');
+      });
+    } else if(inp){
+      inp.classList.add(ok?'cok':'cno');
+      if(!ok) inp.placeholder='Expected: '+q.answer;
+    }
+    if(ok) correct++;
+  });
+  const pct=Math.round(correct/ex.questions.length*100);
+  const band=pct>=90?9:pct>=80?8:pct>=70?7:pct>=60?6:pct>=50?5:4;
+  const cls=band>=7?'good':band>=5?'mid':'low';
+  document.getElementById('rres').innerHTML=`
+    <div class="rbox ${cls}">
+      <div style="display:flex;gap:22px;align-items:center;flex-wrap:wrap">
+        <div><div class="sbig">${correct}/${ex.questions.length}</div><div class="slbl">Correct</div></div>
+        <div><div class="sbig">Band ${band}</div><div class="slbl">Estimated</div></div>
+      </div>
+      <p style="margin-top:10px;font-size:0.83rem;color:var(--muted)">${band>=7?'🎉 Excellent! Keep it up.':band>=5?'👍 Good effort — review the missed answers.':'📚 Practise more. Re-read the passage carefully.'}</p>
+    </div>`;
+  if(!state.r.done.includes(i)){state.r.done.push(i);save();updateBadges();}
+}
+
+// ══════════════════════════════════════
+// WRITING PANEL
+// ══════════════════════════════════════
+function renderWritePanel(i){
+  const ex=WRITING[i];
+  const tipsHtml=(ex.tips||[]).map(t=>`<div class="fb fbw">💡 ${t}</div>`).join('');
+  const chartHtml=ex.chart?`<div class="passage" style="border-color:var(--amber);font-size:0.83rem;line-height:1.65;max-height:none">${ex.chart}</div>`:'';
+  return `<div class="epanel">
+    <div class="ptop"><h3>Exercise ${i+1} — ${ex.title}</h3><span class="tag tag-w">${ex.type}</span></div>
+    <div style="padding:14px 18px;background:var(--bg);border:1px solid var(--border);border-radius:9px;margin-bottom:14px">
+      <div style="font-size:0.7rem;color:var(--amber);letter-spacing:1px;text-transform:uppercase;font-weight:600;margin-bottom:7px">Task Prompt</div>
+      <p style="font-size:0.9rem;line-height:1.75">${ex.prompt}</p>
+    </div>
+    ${chartHtml}
+    <div style="margin-bottom:14px">${tipsHtml}</div>
+    <div style="font-size:0.7rem;color:var(--muted);letter-spacing:1px;text-transform:uppercase;font-weight:600;margin-bottom:7px">Your Response — minimum ${ex.minWords} words</div>
+    <textarea id="wta_${i}" rows="9" placeholder="Write your response here…" oninput="updWC(this,${ex.minWords},'wc_${i}')"></textarea>
+    <div class="wcnt" id="wc_${i}">0 / ${ex.minWords} words minimum</div>
+    <div class="brow">
+      <button class="btn btn-t" onclick="scoreWrite(${i})">📊 Score My Writing</button>
+      <button class="btn btn-g" onclick="document.getElementById('wta_${i}').value='';document.getElementById('wc_${i}').textContent='0 / ${ex.minWords} words minimum'">Clear</button>
+    </div>
+    <div id="wres_${i}"></div>
+  </div>`;
+}
+
+function updWC(el,min,id){
+  const w=el.value.trim()?el.value.trim().split(/\s+/).length:0;
+  const d=document.getElementById(id);
+  d.textContent=`${w} / ${min} words minimum`;
+  d.style.color=w>=min?'var(--green)':'var(--red)';
+}
+
+function scoreWrite(i){
+  const ex=WRITING[i];
+  const txt=document.getElementById(`wta_${i}`).value.trim();
+  if(!txt||txt.split(/\s+/).length<30){alert('Please write more before scoring.');return;}
+  const w=txt.split(/\s+/).length;
+  const hasLink=/however|furthermore|moreover|although|therefore|consequently|in addition|on the other hand|nevertheless/i.test(txt);
+  const hasEg=/for example|for instance|such as|notably|in particular|to illustrate/i.test(txt);
+  const hasOpin=/i believe|i think|in my opinion|i would argue|it seems|i feel|my view/i.test(txt);
+  const hasCon=/in conclusion|to conclude|in summary|overall|to sum up/i.test(txt);
+  const isT2=ex.type==='Task 2';
+  const minW=ex.minWords;
+
+  let ta=6; if(w>=minW+50)ta=7; if(w<minW)ta=5; if(isT2&&!hasOpin)ta=Math.max(ta-0.5,4);
+  let cc=6; if(hasLink)cc=7; if(hasCon)cc+=0.5; cc=Math.min(cc,8);
+  let lr=6; if(w>minW*1.15)lr=7; if(avgWrdLen(txt)>5.5)lr=Math.min(lr+0.5,8);
+  let gr=6; const sents=txt.split(/[.!?]+/).filter(s=>s.trim().length>5); if(sents.length>6)gr=7;
+  const overall=Math.round(((ta+cc+lr+gr)/4)*2)/2;
+  const cls=overall>=7?'good':overall>=5.5?'mid':'low';
+  const wWarn=w<minW?`<div class="fb fbb">⚠️ Under word count: ${w} words. Need at least ${minW}. This lowers your Task Achievement score.</div>`:'';
+
+  document.getElementById(`wres_${i}`).innerHTML=`
+    <div class="rbox ${cls}">
+      <div style="display:flex;gap:20px;align-items:center;flex-wrap:wrap;margin-bottom:14px">
+        <div><div class="sbig">${overall}</div><div class="slbl">Overall Band</div></div>
+        <div style="font-size:0.83rem;line-height:1.6;max-width:380px;color:var(--muted)">Based on your text structure, vocabulary, and argument development.</div>
+      </div>
+      ${wWarn}
+      <table class="btbl">
+        <thead><tr><th>Criterion</th><th>Band</th><th>Feedback</th></tr></thead>
+        <tbody>
+          <tr><td><strong>${isT2?'Task Response':'Task Achievement'}</strong></td><td><strong>${ta}</strong></td><td>${w>=minW?'Word count met.':' Under word count — develop your points more.'} ${isT2&&!hasOpin?'Include a clear personal opinion.':''}</td></tr>
+          <tr><td><strong>Coherence & Cohesion</strong></td><td><strong>${cc}</strong></td><td>${hasLink?'Good use of linking words detected.':'Add linking words: however, furthermore, moreover, consequently...'} ${hasCon?'Conclusion present.':'Add a clear conclusion paragraph.'}</td></tr>
+          <tr><td><strong>Lexical Resource</strong></td><td><strong>${lr}</strong></td><td>${lr>=7?'Good range of vocabulary evident.':'Try using more varied and precise vocabulary. Avoid repeating the same words.'}</td></tr>
+          <tr><td><strong>Grammar</strong></td><td><strong>${gr}</strong></td><td>${sents.length>6?'Good sentence variety.':'Try mixing simple and complex sentences for a better score.'}</td></tr>
+        </tbody>
+      </table>
+      <div style="margin-top:14px;display:grid;grid-template-columns:1fr 1fr;gap:12px">
+        <div>
+          <div style="font-size:0.7rem;color:var(--green);font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:7px">✅ Positives</div>
+          <div class="fb fbg">${hasLink?'✅ Linking/cohesive language used':'⚠️ Add more linking words'}</div>
+          <div class="fb fbg">${w>=minW?'✅ Word count requirement met':'⚠️ Reach the minimum word count'}</div>
+          ${hasEg?`<div class="fb fbg">✅ Examples used to support points</div>`:''}
+        </div>
+        <div>
+          <div style="font-size:0.7rem;color:var(--red);font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:7px">📌 To Improve</div>
+          ${!hasLink?`<div class="fb fbb">Add: however, furthermore, consequently, in addition</div>`:''}
+          ${!hasEg?`<div class="fb fbb">Include specific examples to support each point</div>`:''}
+          ${isT2&&!hasOpin?`<div class="fb fbb">State your opinion clearly: 'I believe...', 'In my view...'</div>`:''}
+          ${!hasCon?`<div class="fb fbb">Add a conclusion: 'In conclusion, ...'</div>`:''}
+        </div>
+      </div>
+    </div>`;
+  if(!state.w.done.includes(i)){state.w.done.push(i);save();updateBadges();}
+}
+
+function avgWrdLen(t){
+  const ws=t.trim().split(/\s+/);
+  return ws.reduce((a,w)=>a+w.replace(/[^a-z]/gi,'').length,0)/ws.length;
+}
+
+// ══════════════════════════════════════
+// LISTENING PANEL
+// ══════════════════════════════════════
+function renderListenPanel(i){
+  const ex=LISTENING[i];
+  const qHtml=ex.questions.map((q,qi)=>`
+    <div class="qb">
+      <div class="ql"><span class="qn" style="background:var(--listening);color:#000">${qi+1}</span>${q.q}</div>
+      <input class="ainp" id="lsa_${i}_${qi}" type="text" placeholder="Your answer…"/>
+    </div>`).join('');
+  return `<div class="epanel">
+    <div class="ptop"><h3>Exercise ${i+1} — ${ex.title}</h3><span class="tag tag-l">Listening · ${ex.accent}</span></div>
+    <p style="font-size:0.8rem;color:var(--muted);margin-bottom:14px">${ex.subtitle}</p>
+    <div style="background:rgba(0,212,170,.06);border:1px solid rgba(0,212,170,.15);border-radius:9px;padding:11px 14px;margin-bottom:14px;font-size:0.8rem;color:var(--muted)">
+      🎧 Press <strong style="color:var(--teal)">▶</strong> to hear the passage. Answer all questions BEFORE showing the transcript.
+    </div>
+    <div class="ttsbar">
+      <button class="pbtn" id="pb_${i}" onclick="togTTS(${i})">▶</button>
+      <div class="tinfo">
+        <div class="ttl">${ex.title}</div>
+        <div class="tsub" id="tst_${i}">Press Play to begin</div>
+      </div>
+      <div class="prgb"><div class="prgf" id="prgf_${i}"></div></div>
+      <select class="ssel" id="spd_${i}" onchange="chgSpd(${i})">
+        <option value="0.8">Slow</option>
+        <option value="1" selected>Normal</option>
+        <option value="1.2">Fast</option>
+      </select>
+    </div>
+    <button class="trbtn" onclick="document.getElementById('tr_${i}').classList.toggle('hidden')">📄 Show / Hide Transcript</button>
+    <div id="tr_${i}" class="passage hidden">${ex.text.replace(/\n/g,'<br/>')}</div>
+    <div style="font-size:0.7rem;color:var(--muted);letter-spacing:1px;text-transform:uppercase;font-weight:600;margin:16px 0 10px">Questions</div>
+    ${qHtml}
+    <div class="brow">
+      <button class="btn btn-t" onclick="checkListen(${i})">Check Answers</button>
+      <button class="btn btn-g" onclick="openEx('l',${i})">Reset</button>
+    </div>
+    <div id="lres_${i}"></div>
+  </div>`;
+}
+
+function checkListen(i){
+  const ex=LISTENING[i];
+  let correct=0;
+  ex.questions.forEach((q,qi)=>{
+    const inp=document.getElementById(`lsa_${i}_${qi}`);
+    const user=(inp?inp.value.toLowerCase().trim():'');
+    const ans=q.answer.toLowerCase().split('/').map(a=>a.trim());
+    const ok=ans.some(a=>user===a||(user.length>1&&a.replace(/[^a-z0-9]/g,'').includes(user.replace(/[^a-z0-9]/g,''))));
+    if(inp){inp.classList.add(ok?'cok':'cno');if(!ok)inp.placeholder='Expected: '+q.answer;}
+    if(ok) correct++;
+  });
+  const pct=Math.round(correct/ex.questions.length*100);
+  const band=pct>=90?9:pct>=80?8:pct>=70?7:pct>=60?6:pct>=50?5:4;
+  const cls=band>=7?'good':band>=5?'mid':'low';
+  document.getElementById(`lres_${i}`).innerHTML=`
+    <div class="rbox ${cls}">
+      <div style="display:flex;gap:22px;align-items:center;flex-wrap:wrap">
+        <div><div class="sbig">${correct}/${ex.questions.length}</div><div class="slbl">Correct</div></div>
+        <div><div class="sbig">Band ${band}</div><div class="slbl">Estimated</div></div>
+      </div>
+      <p style="margin-top:10px;font-size:0.83rem;color:var(--muted)">${band>=7?'🎉 Excellent listening!':band>=5?'👍 Good — check transcript for missed answers.':'📻 Try again — listen once more before checking transcript.'}</p>
+    </div>`;
+  if(!state.l.done.includes(i)){state.l.done.push(i);save();updateBadges();}
+}
+
+// ══════════════════════════════════════
+// TTS
+// ══════════════════════════════════════
+function togTTS(i){
+  const ex=LISTENING[curEx.l];
+  if(ttsPlay){stopTTS();}else{startTTS(i,ex.text);}
+}
+function chgSpd(i){if(ttsPlay){const ex=LISTENING[curEx.l];stopTTS();setTimeout(()=>startTTS(i,ex.text),100);}}
+function startTTS(i,text){
+  if(!window.speechSynthesis){alert('Text-to-speech not supported. Try Chrome or Edge.');return;}
+  stopTTS();
+  ttsTxt=text;
+  ttsUtt=new SpeechSynthesisUtterance(text);
+  const spd=parseFloat(document.getElementById('spd_'+i)?.value||1);
+  ttsUtt.rate=spd;
+  const vs=window.speechSynthesis.getVoices();
+  const v=vs.find(v=>v.lang.startsWith('en-GB'))||vs.find(v=>v.lang.startsWith('en-AU'))||vs.find(v=>v.lang.startsWith('en'));
+  if(v) ttsUtt.voice=v;
+  ttsUtt.onstart=()=>{
+    ttsPlay=true;
+    const b=document.getElementById('pb_'+i);if(b)b.textContent='⏸';
+    const s=document.getElementById('tst_'+i);if(s)s.textContent='Playing…';
+    startProg(i,text,spd);
+  };
+  ttsUtt.onend=()=>{
+    ttsPlay=false;
+    const b=document.getElementById('pb_'+i);if(b)b.textContent='▶';
+    const s=document.getElementById('tst_'+i);if(s)s.textContent='Finished';
+    const p=document.getElementById('prgf_'+i);if(p)p.style.width='100%';
+    clearInterval(progIv);
+  };
+  ttsUtt.onerror=()=>{ttsPlay=false;clearInterval(progIv);};
+  window.speechSynthesis.speak(ttsUtt);
+}
+function startProg(i,text,spd){
+  clearInterval(progIv);
+  let pct=0;
+  const tot=text.split(/\s+/).length/(2.5*spd);
+  progIv=setInterval(()=>{
+    if(!ttsPlay){clearInterval(progIv);return;}
+    pct=Math.min(pct+(100/(tot*10)),98);
+    const p=document.getElementById('prgf_'+i);if(p)p.style.width=pct+'%';
+  },100);
+}
+function stopTTS(){
+  if(window.speechSynthesis)window.speechSynthesis.cancel();
+  ttsPlay=false;clearInterval(progIv);
+}
+
+// ══════════════════════════════════════
+// AUTH SYSTEM
+// ══════════════════════════════════════
+const MASTER = { username:'dreamcatcher', password:'Krupa@2026', name:'Krupa', role:'admin' };
+let currentUser = null;
+
+// Storage helpers keyed per user
+function uKey(k){ return `krupa_${currentUser.username}_${k}`; }
+function uSave(){ try{ localStorage.setItem(uKey('state'), JSON.stringify(state)); }catch(e){} }
+function uLoad(){
+  try{
+    const d = localStorage.getItem(uKey('state'));
+    if(d) state = JSON.parse(d);
+    else state = {r:{done:[]},w:{done:[]},l:{done:[]}};
+  }catch(e){ state = {r:{done:[]},w:{done:[]},l:{done:[]}}; }
+}
+
+// Override save/load to be user-aware
+function save(){ uSave(); }
+function load(){ /* deferred until login */ }
+
+// All registered users (stored in localStorage)
+function getUsers(){
+  try{ return JSON.parse(localStorage.getItem('krupa_users')||'[]'); }catch(e){ return []; }
+}
+function saveUsers(u){ try{ localStorage.setItem('krupa_users',JSON.stringify(u)); }catch(e){} }
+function findUser(un){ return getUsers().find(u=>u.username.toLowerCase()===un.toLowerCase()); }
+
+// ── LOGIN SCREEN ──
+function showLogin(msg=''){
+  document.getElementById('app').classList.add('hidden');
+  document.getElementById('authWrap').classList.remove('hidden');
+  document.getElementById('authWrap').innerHTML = `
+  <div class="auth-box" id="loginBox">
+    <div class="auth-logo">KRUPA <em>IELTS PREP</em></div>
+    <div class="auth-sub">Sign in to continue your IELTS journey</div>
+    ${msg?`<div class="auth-msg err">${msg}</div>`:''}
+    <div class="auth-field">
+      <label>Username</label>
+      <input type="text" id="li_user" placeholder="Enter your username" autocomplete="username"/>
+    </div>
+    <div class="auth-field">
+      <label>Password</label>
+      <div style="position:relative">
+        <input type="password" id="li_pass" placeholder="Enter your password" autocomplete="current-password" onkeydown="if(event.key==='Enter')doLogin()"/>
+        <span class="eye-btn" onclick="togglePwd('li_pass',this)">👁</span>
+      </div>
+    </div>
+    <button class="auth-btn" onclick="doLogin()">Sign In →</button>
+    <div class="auth-divider">Don't have an account?</div>
+    <button class="auth-btn-ghost" onclick="showRegister()">Create New Account</button>
+  </div>`;
+}
+
+// ── REGISTER SCREEN ──
+function showRegister(msg='',prefill={}){
+  document.getElementById('authWrap').innerHTML = `
+  <div class="auth-box">
+    <div class="auth-logo">KRUPA <em>IELTS PREP</em></div>
+    <div class="auth-sub">Create your free account</div>
+    ${msg?`<div class="auth-msg ${msg.startsWith('✅')?'ok':'err'}">${msg}</div>`:''}
+    <div class="auth-field">
+      <label>Full Name</label>
+      <input type="text" id="rg_name" placeholder="Your full name" value="${prefill.name||''}"/>
+    </div>
+    <div class="auth-field">
+      <label>Email Address</label>
+      <input type="email" id="rg_email" placeholder="your@email.com" value="${prefill.email||''}"/>
+    </div>
+    <div class="auth-field">
+      <label>Username <span style="color:var(--muted);font-size:0.75rem">(no spaces)</span></label>
+      <input type="text" id="rg_user" placeholder="Choose a username" value="${prefill.username||''}"/>
+    </div>
+    <div class="auth-field">
+      <label>Password <span style="color:var(--muted);font-size:0.75rem">(min. 6 characters)</span></label>
+      <div style="position:relative">
+        <input type="password" id="rg_pass" placeholder="Create a password"/>
+        <span class="eye-btn" onclick="togglePwd('rg_pass',this)">👁</span>
+      </div>
+    </div>
+    <div class="auth-field">
+      <label>Confirm Password</label>
+      <div style="position:relative">
+        <input type="password" id="rg_pass2" placeholder="Repeat your password" onkeydown="if(event.key==='Enter')doRegister()"/>
+        <span class="eye-btn" onclick="togglePwd('rg_pass2',this)">👁</span>
+      </div>
+    </div>
+    <button class="auth-btn" onclick="doRegister()">Create Account →</button>
+    <div class="auth-divider">Already have an account?</div>
+    <button class="auth-btn-ghost" onclick="showLogin()">Back to Sign In</button>
+  </div>`;
+}
+
+// ── VERIFY EMAIL SCREEN ──
+function showVerify(userData){
+  // Simulate a 6-digit OTP
+  const otp = Math.floor(100000 + Math.random()*900000).toString();
+  localStorage.setItem('krupa_pending_otp', otp);
+  localStorage.setItem('krupa_pending_user', JSON.stringify(userData));
+  // In a real app you'd email this. Here we show it on screen (simulation)
+  document.getElementById('authWrap').innerHTML = `
+  <div class="auth-box">
+    <div class="auth-logo">KRUPA <em>IELTS PREP</em></div>
+    <div class="auth-sub">Email Verification</div>
+    <div class="auth-msg ok" style="text-align:center;margin-bottom:20px">
+      ✅ A verification code has been sent to<br/>
+      <strong style="color:var(--teal)">${userData.email}</strong>
+    </div>
+    <div style="background:var(--surface2);border:1px solid var(--teal);border-radius:10px;padding:16px;text-align:center;margin-bottom:20px">
+      <div style="font-size:0.72rem;color:var(--muted);letter-spacing:1px;text-transform:uppercase;margin-bottom:8px">Your Verification Code</div>
+      <div style="font-family:'Cormorant Garamond',serif;font-size:2.4rem;font-weight:700;color:var(--teal);letter-spacing:8px">${otp}</div>
+      <div style="font-size:0.72rem;color:var(--muted);margin-top:6px">(In a live deployment this would be emailed to you)</div>
+    </div>
+    <div class="auth-field">
+      <label>Enter Verification Code</label>
+      <input type="text" id="otp_inp" placeholder="6-digit code" maxlength="6" style="text-align:center;letter-spacing:6px;font-size:1.2rem" onkeydown="if(event.key==='Enter')doVerify()"/>
+    </div>
+    <button class="auth-btn" onclick="doVerify()">Verify & Activate Account →</button>
+    <div class="auth-divider"></div>
+    <button class="auth-btn-ghost" onclick="showRegister()">← Back</button>
+  </div>`;
+}
+
+// ── FORGOT PASSWORD ──
+function showForgot(){
+  document.getElementById('authWrap').innerHTML=`
+  <div class="auth-box">
+    <div class="auth-logo">KRUPA <em>IELTS PREP</em></div>
+    <div class="auth-sub">Reset your password</div>
+    <div class="auth-field">
+      <label>Enter your registered email</label>
+      <input type="email" id="fp_email" placeholder="your@email.com"/>
+    </div>
+    <button class="auth-btn" onclick="doForgot()">Send Reset Code →</button>
+    <div class="auth-divider"></div>
+    <button class="auth-btn-ghost" onclick="showLogin()">← Back to Sign In</button>
+  </div>`;
+}
+
+// ── AUTH LOGIC ──
+function doLogin(){
+  const un = (document.getElementById('li_user').value||'').trim();
+  const pw = document.getElementById('li_pass').value||'';
+  if(!un||!pw){ showLogin('⚠️ Please enter both username and password.'); return; }
+
+  // Master user check
+  if(un.toLowerCase()==='dreamcatcher'){
+    if(pw===MASTER.password){
+      loginSuccess({username:MASTER.username,name:MASTER.name,email:'krupa@ielts.com',role:'admin'});
+    } else {
+      showLogin('❌ Incorrect password. Please try again.');
+    }
+    return;
+  }
+
+  // Regular user check
+  const user = findUser(un);
+  if(!user){ showLogin(`❌ Username "${un}" not found. Please register first.`); return; }
+  if(!user.verified){ showLogin('❌ Account not verified. Please complete email verification.'); return; }
+  if(user.password !== btoa(pw)){ showLogin('❌ Incorrect password. Please try again.'); return; }
+  loginSuccess(user);
+}
+
+function doRegister(){
+  const name=(document.getElementById('rg_name').value||'').trim();
+  const email=(document.getElementById('rg_email').value||'').trim();
+  const un=(document.getElementById('rg_user').value||'').trim().toLowerCase();
+  const pw=document.getElementById('rg_pass').value||'';
+  const pw2=document.getElementById('rg_pass2').value||'';
+  const pf={name,email,username:un};
+
+  if(!name||!email||!un||!pw){ showRegister('⚠️ All fields are required.',pf); return; }
+  if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){ showRegister('⚠️ Please enter a valid email address.',pf); return; }
+  if(un.length<3){ showRegister('⚠️ Username must be at least 3 characters.',pf); return; }
+  if(/\s/.test(un)){ showRegister('⚠️ Username cannot contain spaces.',pf); return; }
+  if(un==='dreamcatcher'){ showRegister('⚠️ That username is reserved. Please choose another.',pf); return; }
+  if(pw.length<6){ showRegister('⚠️ Password must be at least 6 characters.',pf); return; }
+  if(pw!==pw2){ showRegister('⚠️ Passwords do not match.',pf); return; }
+  if(findUser(un)){ showRegister(`⚠️ Username "${un}" is already taken. Try another.`,pf); return; }
+
+  const userData={name,email,username:un,password:btoa(pw),verified:false,joined:new Date().toISOString()};
+  showVerify(userData);
+}
+
+function doVerify(){
+  const entered=(document.getElementById('otp_inp').value||'').trim();
+  const realOtp=localStorage.getItem('krupa_pending_otp');
+  const userData=JSON.parse(localStorage.getItem('krupa_pending_user')||'{}');
+  if(entered!==realOtp){
+    document.querySelector('.auth-msg').className='auth-msg err';
+    document.querySelector('.auth-msg').textContent='❌ Incorrect code. Please try again.';
+    return;
+  }
+  userData.verified=true;
+  const users=getUsers();
+  users.push(userData);
+  saveUsers(users);
+  localStorage.removeItem('krupa_pending_otp');
+  localStorage.removeItem('krupa_pending_user');
+  showLogin(`✅ Account verified! Welcome, ${userData.name}. Please sign in.`);
+}
+
+function doForgot(){
+  const email=(document.getElementById('fp_email').value||'').trim();
+  const users=getUsers();
+  const user=users.find(u=>u.email.toLowerCase()===email.toLowerCase());
+  if(!user){ showLogin('⚠️ No account found with that email.'); return; }
+  const otp=Math.floor(100000+Math.random()*900000).toString();
+  localStorage.setItem('krupa_pending_otp',otp);
+  localStorage.setItem('krupa_reset_user',user.username);
+  document.getElementById('authWrap').innerHTML=`
+  <div class="auth-box">
+    <div class="auth-logo">KRUPA <em>IELTS PREP</em></div>
+    <div class="auth-sub">Reset Code</div>
+    <div class="auth-msg ok" style="text-align:center">
+      Reset code for <strong style="color:var(--teal)">${email}</strong>
+    </div>
+    <div style="background:var(--surface2);border:1px solid var(--teal);border-radius:10px;padding:16px;text-align:center;margin:16px 0">
+      <div style="font-family:'Cormorant Garamond',serif;font-size:2.4rem;font-weight:700;color:var(--teal);letter-spacing:8px">${otp}</div>
+    </div>
+    <div class="auth-field"><label>Enter Code</label><input type="text" id="rst_otp" placeholder="6-digit code" maxlength="6" style="text-align:center;letter-spacing:6px;font-size:1.2rem"/></div>
+    <div class="auth-field"><label>New Password</label><div style="position:relative"><input type="password" id="rst_pw" placeholder="New password"/><span class="eye-btn" onclick="togglePwd('rst_pw',this)">👁</span></div></div>
+    <div class="auth-field"><label>Confirm Password</label><div style="position:relative"><input type="password" id="rst_pw2" placeholder="Confirm password" onkeydown="if(event.key==='Enter')doReset()"/><span class="eye-btn" onclick="togglePwd('rst_pw2',this)">👁</span></div></div>
+    <button class="auth-btn" onclick="doReset()">Reset Password →</button>
+  </div>`;
+}
+
+function doReset(){
+  const otp=(document.getElementById('rst_otp').value||'').trim();
+  const pw=document.getElementById('rst_pw').value||'';
+  const pw2=document.getElementById('rst_pw2').value||'';
+  const realOtp=localStorage.getItem('krupa_pending_otp');
+  const un=localStorage.getItem('krupa_reset_user');
+  if(otp!==realOtp){alert('Incorrect code.');return;}
+  if(pw.length<6){alert('Password must be at least 6 characters.');return;}
+  if(pw!==pw2){alert('Passwords do not match.');return;}
+  const users=getUsers();
+  const idx=users.findIndex(u=>u.username===un);
+  if(idx>-1){ users[idx].password=btoa(pw); saveUsers(users); }
+  localStorage.removeItem('krupa_pending_otp');
+  localStorage.removeItem('krupa_reset_user');
+  showLogin('✅ Password reset successfully! Please sign in with your new password.');
+}
+
+function loginSuccess(user){
+  currentUser=user;
+  localStorage.setItem('krupa_session',JSON.stringify(user));
+  document.getElementById('authWrap').classList.add('hidden');
+  document.getElementById('app').classList.remove('hidden');
+  uLoad();
+  // Set username in header
+  document.getElementById('userChip').innerHTML=`
+    <span style="font-size:0.78rem;color:var(--muted)">👤</span>
+    <span style="font-size:0.82rem;font-weight:600;color:var(--teal)">${user.name||user.username}</span>
+    ${user.role==='admin'?'<span style="font-size:0.6rem;background:var(--amber);color:#000;padding:1px 6px;border-radius:8px;font-weight:700;margin-left:3px">ADMIN</span>':''}
+    <button onclick="doLogout()" style="background:none;border:1px solid var(--border);color:var(--muted);padding:3px 8px;border-radius:5px;cursor:pointer;font-size:0.7rem;margin-left:6px;font-family:inherit">Sign Out</button>`;
+  if(window.speechSynthesis){window.speechSynthesis.onvoiceschanged=()=>window.speechSynthesis.getVoices();window.speechSynthesis.getVoices();}
+  updateBadges();
+  renderHome();
+}
+
+function doLogout(){
+  stopTTS();
+  currentUser=null;
+  state={r:{done:[]},w:{done:[]},l:{done:[]}};
+  localStorage.removeItem('krupa_session');
+  document.getElementById('app').classList.add('hidden');
+  showLogin();
+}
+
+function togglePwd(id,btn){
+  const el=document.getElementById(id);
+  if(el.type==='password'){el.type='text';btn.textContent='🙈';}
+  else{el.type='password';btn.textContent='👁';}
+}
+
+// ── BOOT ──
+(function boot(){
+  // Check for existing session
+  try{
+    const sess=localStorage.getItem('krupa_session');
+    if(sess){
+      const user=JSON.parse(sess);
+      if(user&&user.username){
+        loginSuccess(user);
+        return;
+      }
+    }
+  }catch(e){}
+  showLogin();
+})();
+</script>
+</div>
+</body>
+</html>
