@@ -935,7 +935,7 @@ function renderReadPanel(i){
   const ex=READING[i];
   const qHtml=ex.questions.map((q,qi)=>{
     if(q.type==='tfng'||q.type==='mcq'){
-      return `<div class="qb"><div class="ql"><span class="qn" style="background:var(--reading)">${qi+1}</span>${q.q}</div>
+      return `<div class="qb" id="rqb_${i}_${qi}"><div class="ql"><span class="qn" style="background:var(--reading)">${qi+1}</span>${q.q}</div>
         <div class="opts">${q.options.map(o=>`<div class="opt" data-v="${o}" onclick="selRO(${i},${qi},this)">${o}</div>`).join('')}</div></div>`;
     } else {
       return `<div class="qb"><div class="ql"><span class="qn" style="background:var(--reading)">${qi+1}</span>${q.q}</div>
@@ -971,7 +971,8 @@ function checkRead(i){
     const ans=q.answer.toLowerCase().trim();
     const ok=user===ans||ans.split('/').map(a=>a.trim()).some(a=>user===a)||(user.length>2&&ans.includes(user));
     if(q.type==='tfng'||q.type==='mcq'){
-      const opts=document.querySelectorAll(`#panel .qb:nth-child(${qi+1}) .opt`);
+      const qbEl=document.getElementById(`rqb_${i}_${qi}`)||document.querySelectorAll('#panel .qb')[qi];
+      const opts=qbEl?qbEl.querySelectorAll('.opt'):[];
       opts.forEach(o=>{
         if(o.dataset.v===q.answer) o.classList.add('correct');
         if(o.classList.contains('sel')&&o.dataset.v!==q.answer) o.classList.add('wrong');
